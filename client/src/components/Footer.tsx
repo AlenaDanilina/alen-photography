@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-5">
           <a
-            href="https://instagram.com/alendanilina"
+            href="https://instagram.com/your.alen"
             target="_blank"
             rel="noopener noreferrer"
             className="label-editorial transition-colors duration-300"
@@ -50,13 +50,24 @@ export default function Footer() {
             Instagram
           </a>
           <a
-            href="mailto:hello@alendanilina.com"
+            href="mailto:alyondanilin32@gmail.com"
             className="label-editorial transition-colors duration-300"
             style={{ color: 'rgba(248,246,242,0.3)', fontSize: '0.5625rem' }}
             onMouseEnter={(e) => (e.currentTarget.style.color = 'rgba(248,246,242,0.7)')}
             onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(248,246,242,0.3)')}
           >
             Email
+          </a>
+          <a
+            href="https://t.me/awakefrom"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="label-editorial transition-colors duration-300"
+            style={{ color: 'rgba(248,246,242,0.3)', fontSize: '0.5625rem' }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = 'rgba(248,246,242,0.7)')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(248,246,242,0.3)')}
+          >
+            Telegram
           </a>
         </div>
       </div>

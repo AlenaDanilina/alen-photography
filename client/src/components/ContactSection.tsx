@@ -71,7 +71,7 @@ export default function ContactSection() {
           {/* CTA */}
           <div className="reveal reveal-delay-3 mb-16">
             <a
-              href="https://instagram.com/alendanilina"
+              href="https://instagram.com/your.alen"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-editorial-ghost"
@@ -86,7 +86,7 @@ export default function ContactSection() {
             style={{ borderTop: '1px solid rgba(248,246,242,0.1)', paddingTop: '2rem' }}
           >
             <a
-              href="https://instagram.com/alendanilina"
+              href="https://instagram.com/your.alen"
               target="_blank"
               rel="noopener noreferrer"
               className="label-editorial transition-colors duration-300"
@@ -98,7 +98,7 @@ export default function ContactSection() {
             </a>
             <span style={{ color: 'oklch(0.35 0.01 60)' }}>·</span>
             <a
-              href="mailto:hello@alendanilina.com"
+              href="mailto:alyondanilin32@gmail.com"
               className="label-editorial transition-colors duration-300"
               style={{ color: 'oklch(0.65 0.015 60)' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'oklch(0.977 0.005 75)')}
@@ -108,7 +108,7 @@ export default function ContactSection() {
             </a>
             <span style={{ color: 'oklch(0.35 0.01 60)' }}>·</span>
             <a
-              href="https://wa.me/905000000000"
+              href="https://t.me/awakefrom"
               target="_blank"
               rel="noopener noreferrer"
               className="label-editorial transition-colors duration-300"
@@ -116,7 +116,7 @@ export default function ContactSection() {
               onMouseEnter={(e) => (e.currentTarget.style.color = 'oklch(0.977 0.005 75)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'oklch(0.65 0.015 60)')}
             >
-              WhatsApp
+              Telegram
             </a>
           </div>
         </div>
