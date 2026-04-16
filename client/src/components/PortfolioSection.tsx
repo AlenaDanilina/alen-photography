@@ -24,13 +24,6 @@ const IMAGES = [
     span: '',
   },
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/scan0022-4_f03ad71d.webp',
-    alt: 'Portrait — intimate black & white',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000015_0c5486e6.webp',
     alt: 'Fashion — bold pose & red tights',
     category: { en: 'Fashion', ru: 'Мода' },
