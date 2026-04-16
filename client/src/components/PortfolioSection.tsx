@@ -10,15 +10,15 @@ import { useState } from 'react';
 
 const IMAGES = [
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/portfolio-1-dmekCfASoxgspv6YDPXJc7.webp',
-    alt: 'Fashion editorial — black blazer portrait',
-    category: { en: 'Fashion', ru: 'Мода' },
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000025_05c7a7a3.jpg',
+    alt: 'Portrait — soft natural light',
+    category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
     span: 'row-span-2',
   },
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/portfolio-2-7EthysiPyCukvKhjYcrTr4.webp',
-    alt: 'Istanbul balcony — golden hour',
+    alt: 'Editorial — golden hour',
     category: { en: 'Editorial', ru: 'Эдиториал' },
     aspect: '3/4',
     span: '',
