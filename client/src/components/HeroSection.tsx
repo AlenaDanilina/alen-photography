@@ -73,7 +73,7 @@ export default function HeroSection() {
               transitionDelay: '0s',
             }}
           >
-            {t('Istanbul', 'Стамбул')} / {t('Fashion & Editorial', 'Мода и Эдиториал')}
+            {t('Istanbul', 'Стамбул')} / {t('Portraits Fashion Editorial', 'Портреты Мода Эдиториал')}
           </p>
 
           {/* Name */}
