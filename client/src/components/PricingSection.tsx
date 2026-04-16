@@ -79,7 +79,7 @@ export default function PricingSection() {
                 className="heading-display mb-3"
                 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontStyle: 'italic' }}
               >
-                {t('Shooting', 'Съёмка')}
+                {t('Portrait shooting', 'Портретная съёмка')}
               </h2>
               <div
                 className="heading-display"
