@@ -7,7 +7,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
-const PRICING_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/portfolio-2-7EthysiPyCukvKhjYcrTr4.webp';
+const PRICING_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0540-1_1ba1dd9b.webp';
 
 const featuresEN = [
   'Film + digital',
