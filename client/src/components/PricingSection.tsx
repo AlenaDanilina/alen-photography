@@ -107,8 +107,8 @@ export default function PricingSection() {
                     fontSize: '0.9375rem',
                     lineHeight: 1.6,
                     color: 'oklch(0.4 0.01 60)',
-                    borderBottom: i < features.length - 1 ? '1px solid oklch(0.87 0.01 75)' : 'none',
-                    paddingBottom: i < features.length - 1 ? '1rem' : '0',
+                    borderBottom: '1px solid oklch(0.87 0.01 75)',
+                    paddingBottom: '1rem',
                   }}
                 >
                   <span
