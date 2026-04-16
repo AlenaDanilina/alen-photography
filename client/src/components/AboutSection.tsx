@@ -7,7 +7,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
-const ABOUT_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/portfolio-3-27T8RhNMDFLowhiS5Rff3x.webp';
+const ABOUT_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/scan0022-4_f03ad71d.webp';
 
 export default function AboutSection() {
   const { t, lang } = useLanguage();
