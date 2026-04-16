@@ -247,6 +247,10 @@
     opacity: 1;
   }
 
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1 !important;
+  }
+
   /* FAQ accordion */
   .faq-item {
     border-bottom: 1px solid oklch(0.87 0.01 75);

@@ -180,18 +180,22 @@ export default function PortfolioSection() {
                 loading="lazy"
                 style={{ aspectRatio: '3/4' }}
               />
-              <div className="caption">
-                <span
-                  className="label-editorial"
-                  style={{ color: 'rgba(248,246,242,0.8)', fontSize: '0.6rem' }}
-                >
-                  {lang === 'en' ? img.category.en : img.category.ru}
-                </span>
-              </div>
+              {/* Category caption — only in category view, not All */}
+              {activeCategory !== 0 && (
+                <div className="caption">
+                  <span
+                    className="label-editorial"
+                    style={{ color: 'rgba(248,246,242,0.8)', fontSize: '0.6rem' }}
+                  >
+                    {lang === 'en' ? img.category.en : img.category.ru}
+                  </span>
+                </div>
+              )}
 
-              {/* "View collection" overlay for All view */}
+              {/* "View collection" overlay for All view — visible on hover */}
               {activeCategory === 0 && (
                 <div
+                  className="portfolio-overlay"
                   style={{
                     position: 'absolute',
                     bottom: 0,
@@ -203,6 +207,8 @@ export default function PortfolioSection() {
                     alignItems: 'flex-end',
                     justifyContent: 'space-between',
                     pointerEvents: 'none',
+                    opacity: 0,
+                    transition: 'opacity 0.4s ease',
                   }}
                 >
                   <span
