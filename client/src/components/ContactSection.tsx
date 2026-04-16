@@ -21,7 +21,7 @@ export default function ContactSection() {
       {/* Ghost text */}
       <span
         className="ghost-text"
-        style={{ bottom: '-2rem', right: '-1rem', opacity: 0.04, color: 'oklch(0.977 0.005 75)' }}
+        style={{ bottom: '0.5rem', right: '-1rem', opacity: 0.03, color: 'oklch(0.977 0.005 75)', overflow: 'hidden' }}
       >
         {t('Contact', 'Контакт')}
       </span>
