@@ -16,7 +16,7 @@ const featuresEN = [
   'Studio, film & development included',
   '2–3 hours, no strict timing',
   'Guidance with posing & styling',
-  'Access to my wardrobe',
+  'Access to studio wardrobe',
 ];
 
 const featuresRU = [
@@ -26,7 +26,7 @@ const featuresRU = [
   'Студия, плёнка и проявка включены',
   '2–3 часа, без жёстких ограничений',
   'Помощь с позированием и образами',
-  'Доступ к моему гардеробу',
+  'Доступ к студийному гардеробу',
 ];
 
 export default function PricingSection() {
