@@ -1,20 +1,31 @@
 /*
  * PORTFOLIO SECTION — Alen Danilina Portfolio
  * Design: Masonry-style grid, large images, generous whitespace
- * Hover: subtle scale + caption fade
+ * All tab: shows one representative image per category; clicking opens that category
+ * Category tabs: show all images in that category
  */
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 import { useState } from 'react';
 
-const IMAGES = [
+interface ImageItem {
+  src: string;
+  alt: string;
+  category: { en: string; ru: string };
+  aspect: string;
+  span: string;
+  isPreview?: boolean; // marks the representative image for "All" view
+}
+
+const IMAGES: ImageItem[] = [
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000025_05c7a7a3.jpg',
     alt: 'Portrait — soft natural light',
     category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
     span: 'row-span-2',
+    isPreview: true,
   },
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1758_56bda2f1.JPG',
@@ -22,6 +33,7 @@ const IMAGES = [
     category: { en: 'Editorial', ru: 'Эдиториал' },
     aspect: '3/4',
     span: '',
+    isPreview: true,
   },
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000015_0c5486e6.webp',
@@ -29,6 +41,7 @@ const IMAGES = [
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
+    isPreview: true,
   },
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000014_879d066f.webp',
@@ -70,13 +83,29 @@ export default function PortfolioSection() {
 
   const categories = lang === 'en' ? CATEGORIES_EN : CATEGORIES_RU;
 
+  // "All" view: show only preview images (one per category)
+  // Category view: show all images in that category
   const filteredImages = activeCategory === 0
-    ? IMAGES
+    ? IMAGES.filter((img) => img.isPreview)
     : IMAGES.filter((img) =>
         lang === 'en'
           ? img.category.en === CATEGORIES_EN[activeCategory]
           : img.category.ru === CATEGORIES_RU[activeCategory]
       );
+
+  // Find category index by image's category name
+  const getCategoryIndex = (img: ImageItem): number => {
+    const catEN = img.category.en;
+    return CATEGORIES_EN.indexOf(catEN);
+  };
+
+  const handleImageClick = (img: ImageItem) => {
+    if (activeCategory === 0) {
+      // In "All" view, clicking navigates to that category
+      const idx = getCategoryIndex(img);
+      if (idx > 0) setActiveCategory(idx);
+    }
+  };
 
   return (
     <section
@@ -137,17 +166,19 @@ export default function PortfolioSection() {
           {filteredImages.map((img, i) => (
             <div
               key={img.src}
-              className="reveal portfolio-item"
+              className={`reveal portfolio-item${activeCategory === 0 ? ' cursor-pointer' : ''}`}
               style={{
                 transitionDelay: `${i * 0.12}s`,
-                aspectRatio: i === 0 || i === 3 ? '3/4' : i === 2 ? '4/3' : '3/4',
+                aspectRatio: '3/4',
+                position: 'relative',
               }}
+              onClick={() => handleImageClick(img)}
             >
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                style={{ aspectRatio: i === 0 || i === 3 ? '3/4' : i === 2 ? '4/3' : '3/4' }}
+                style={{ aspectRatio: '3/4' }}
               />
               <div className="caption">
                 <span
@@ -157,6 +188,45 @@ export default function PortfolioSection() {
                   {lang === 'en' ? img.category.en : img.category.ru}
                 </span>
               </div>
+
+              {/* "View collection" overlay for All view */}
+              {activeCategory === 0 && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    padding: '2rem 1.5rem',
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)',
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    justifyContent: 'space-between',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)',
+                      fontStyle: 'italic',
+                      color: 'oklch(0.977 0.005 75)',
+                      fontWeight: 300,
+                    }}
+                  >
+                    {lang === 'en' ? img.category.en : img.category.ru}
+                  </span>
+                  <span
+                    className="label-editorial"
+                    style={{
+                      color: 'oklch(0.72 0.04 60)',
+                      fontSize: '0.5625rem',
+                    }}
+                  >
+                    {t('View collection →', 'Смотреть →')}
+                  </span>
+                </div>
+              )}
             </div>
           ))}
         </div>
