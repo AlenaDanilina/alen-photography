@@ -30,6 +30,34 @@ const IMAGES = [
     aspect: '3/4',
     span: '',
   },
+  {
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000014_879d066f.webp',
+    alt: 'Fashion — black dress & fur collar',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1759_211f1e44.JPG',
+    alt: 'Fashion — floral sofa & white dress',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/DSC05829-32_1a007cc2.webp',
+    alt: 'Fashion — winter shearling & sunglasses',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0248fff_36880a9c.webp',
+    alt: 'Fashion — white blazer & wet hair',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
 ];
 
 const CATEGORIES_EN = ['All', 'Fashion', 'Portrait', 'Editorial'];
