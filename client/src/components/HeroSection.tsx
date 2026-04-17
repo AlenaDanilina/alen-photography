@@ -7,7 +7,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 
-const HERO_IMAGE = '/manus-storage/305C0932_de765cbd.webp';
+const HERO_IMAGE = '/manus-storage/305C0932-hq_80d09f15.webp';
 
 export default function HeroSection() {
   const { t } = useLanguage();

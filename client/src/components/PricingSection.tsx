@@ -139,6 +139,20 @@ export default function PricingSection() {
             >
               {t('50€ deposit to confirm your booking.', 'Предоплата 50€ для подтверждения записи.')}
             </p>
+
+            {/* Custom pricing note */}
+            <p
+              className="reveal reveal-delay-4 mt-4"
+              style={{
+                fontFamily: "'Jost', sans-serif",
+                fontWeight: 300,
+                fontSize: '0.8125rem',
+                color: 'oklch(0.65 0.015 60)',
+                letterSpacing: '0.02em',
+              }}
+            >
+              {t('Model tests and brand collaborations — custom rates. Get in touch to discuss your project.', 'Для модельных тестов и брендовых съёмок — цена обговаривается индивидуально. Напишите, чтобы обсудить детали')}
+            </p>
           </div>
         </div>
       </div>
