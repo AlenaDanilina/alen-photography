@@ -173,6 +173,13 @@ const IMAGES: ImageItem[] = [
   },
 
   {
+    src: '/manus-storage/000025_62f55cd2.webp',
+    alt: 'Fashion — fur hood, hands on face',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
     src: '/manus-storage/305C0229-11_0c067d50.webp',
     alt: 'Fashion — white blazer with heels',
     category: { en: 'Fashion', ru: 'Мода' },
@@ -217,6 +224,20 @@ const IMAGES: ImageItem[] = [
   {
     src: '/manus-storage/Untitled-(3)-(4)_2ef21731.webp',
     alt: 'Fashion — polaroid, beach sunset',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/13_f7dbe984.webp',
+    alt: 'Fashion — green suit at harbor',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/9_aa31d404.webp',
+    alt: 'Fashion — green blazer by water, hat',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
