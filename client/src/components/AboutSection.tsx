@@ -73,10 +73,10 @@ export default function AboutSection() {
                   <p>I'm a photographer working with portraits, model tests, and brand shoots.</p>
                   <p>
                     My focus is on light, aesthetics, and capturing a natural yet intentional presence in the frame.
-                    I shoot both on film and digital, combining raw emotion with clean composition.
+                    I shoot both on film and digital.
                   </p>
                   <p>
-                    I'm based in Istanbul and work in my own studio space, where we can create the right mood and visual story.
+                    I'm based in Istanbul and work in my own studio space, where we can create the right mood and feel ourselves comfortable.
                   </p>
                 </>
               ) : (
@@ -84,10 +84,10 @@ export default function AboutSection() {
                   <p>Я — фотограф, работающий с портретами, модельными тестами и съёмками для брендов.</p>
                   <p>
                     Для меня важна эстетика, свет и ощущение человека в кадре.
-                    Я снимаю на плёнку и цифровую камеру, сочетая живость момента и точность формы.
+                    Я снимаю на плёнку и цифру.
                   </p>
                   <p>
-                    Я работаю в Стамбуле, в своём пространстве, где мы можем спокойно создать нужную атмосферу и визуальный результат.
+                    Я работаю в Стамбуле, в своём пространстве, где мы можем спокойно создать нужную атмосферу и чувствовать себя комфортно.
                   </p>
                 </>
               )}

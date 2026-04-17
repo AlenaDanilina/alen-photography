@@ -63,8 +63,8 @@ export default function ContactSection() {
             }}
           >
             {t(
-              'Reach out via Instagram or email. I respond within 24 hours.',
-              'Напишите в Instagram или на почту. Отвечаю в течение 24 часов.'
+              'Reach out via Telegram, Instagram or email. I respond within 24 hours.',
+              'Напишите в Telegram, Instagram или на почту. Отвечаю в течение 24 часов.'
             )}
           </p>
 

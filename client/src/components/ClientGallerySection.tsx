@@ -128,8 +128,8 @@ export default function ClientGallerySection() {
               }}
             >
               {t(
-                'Browse finished client sessions — delivered portraits, fashion editorials, and personal stories. Each gallery is a complete visual narrative.',
-                'Готовые клиентские съёмки — портреты, фэшн-эдиториалы и личные истории. Каждая галерея — это законченная визуальная история.'
+                'Browse finished client sessions — delivered portraits, fashion editorials, and personal stories, exactly how you would see a publish result.',
+                'Готовые клиентские съёмки — портреты, фэшн-эдиториалы и личные истории — именно так, как вы увидите готовый результат.'
               )}
             </p>
 
