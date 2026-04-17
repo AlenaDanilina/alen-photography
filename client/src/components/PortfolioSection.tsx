@@ -179,10 +179,14 @@ export default function PortfolioSection() {
           </div>
         </div>
 
-        {/* Grid */}
+        {/* Grid — 3 columns for All view (3 preview images), 2 columns for category views */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5"
+          className={`grid grid-cols-1 gap-4 md:gap-5 ${
+            activeCategory === 0
+              ? 'md:grid-cols-3'
+              : 'md:grid-cols-2'
+          }`}
         >
           {filteredImages.map((img, i) => (
             <div
