@@ -7,7 +7,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface ImageItem {
   src: string;
@@ -80,6 +80,7 @@ export default function PortfolioSection() {
   const { t, lang } = useLanguage();
   const ref = useReveal();
   const [activeCategory, setActiveCategory] = useState(0);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const categories = lang === 'en' ? CATEGORIES_EN : CATEGORIES_RU;
 
@@ -106,6 +107,25 @@ export default function PortfolioSection() {
       if (idx > 0) setActiveCategory(idx);
     }
   };
+
+  // After switching tabs, make new grid items visible with a small staggered delay
+  // This fixes the bug where reveal elements stay invisible after tab switch
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    // Small timeout to let React render the new items
+    const timer = setTimeout(() => {
+      const items = grid.querySelectorAll('.portfolio-item');
+      items.forEach((item, i) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, i * 80);
+      });
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [activeCategory]);
 
   return (
     <section
@@ -161,11 +181,12 @@ export default function PortfolioSection() {
 
         {/* Grid */}
         <div
+          ref={gridRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5"
         >
           {filteredImages.map((img, i) => (
             <div
-              key={img.src}
+              key={`${activeCategory}-${img.src}`}
               className={`reveal portfolio-item${activeCategory === 0 ? ' cursor-pointer' : ''}`}
               style={{
                 transitionDelay: `${i * 0.12}s`,
