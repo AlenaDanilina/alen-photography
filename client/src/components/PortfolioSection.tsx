@@ -22,13 +22,12 @@ interface ImageItem {
 const IMAGES: ImageItem[] = [
   // === PORTRAIT ===
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000025_05c7a7a3.jpg',
-    alt: 'Portrait — soft natural light',
+    src: '/manus-storage/305C0932_f27c22ba.webp',
+    alt: 'Portrait — freckles, natural light',
     category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
     span: 'row-span-2',
     isPreview: true,
-    objectPosition: 'center 30%',
   },
   {
     src: '/manus-storage/000052_1598e0ed.webp',
@@ -59,7 +58,7 @@ const IMAGES: ImageItem[] = [
     span: '',
   },
   {
-    src: '/manus-storage/000023_736cee82.webp',
+    src: '/manus-storage/000023_7979624f.webp',
     alt: 'Portrait — sequin top, golden light',
     category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
@@ -112,13 +111,7 @@ const IMAGES: ImageItem[] = [
     span: '',
     objectPosition: 'center 25%',
   },
-  {
-    src: '/manus-storage/305C0932_e55092c0.webp',
-    alt: 'Model Tests — freckles, b&w portrait',
-    category: { en: 'Model Tests', ru: 'Модельные тесты' },
-    aspect: '3/4',
-    span: '',
-  },
+
 
   // === FASHION ===
   {
@@ -154,6 +147,34 @@ const IMAGES: ImageItem[] = [
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0248fff_36880a9c.webp',
     alt: 'Fashion — white blazer & wet hair',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/DSC06221_31d0457c.webp',
+    alt: 'Fashion — snow, white shearling coat',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/DSC06447_c35ab7fd.webp',
+    alt: 'Fashion — snow, sitting in leather jacket',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/Untitled-(3)-(4)_2ef21731.webp',
+    alt: 'Fashion — polaroid, beach sunset',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/Untitled-(6)_5f89f988.webp',
+    alt: 'Fashion — polaroid, back view ocean',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
