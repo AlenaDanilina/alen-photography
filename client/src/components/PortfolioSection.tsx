@@ -262,17 +262,7 @@ export default function PortfolioSection() {
           ))}
         </div>
 
-        {/* Decorative divider */}
-        <div className="reveal mt-20 flex justify-center">
-          <span
-            style={{
-              display: 'block',
-              width: '60px',
-              height: '1px',
-              background: 'oklch(0.72 0.04 60 / 0.3)',
-            }}
-          />
-        </div>
+
       </div>
     </section>
   );
