@@ -71,9 +71,7 @@ export default function ContactSection() {
           {/* CTA */}
           <div className="reveal reveal-delay-3 mb-16">
             <a
-              href="https://instagram.com/your.alen"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:alyondanilin32@gmail.com"
               className="btn-editorial-ghost"
             >
               {t('Book a shoot', 'Записаться')}
