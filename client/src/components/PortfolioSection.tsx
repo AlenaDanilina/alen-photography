@@ -262,15 +262,16 @@ export default function PortfolioSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="reveal mt-16 text-center">
-          <a
-            href="#contact"
-            className="btn-editorial-ghost"
-            style={{ borderColor: 'rgba(248,246,242,0.3)' }}
-          >
-            {t('Book a shoot', 'Записаться на съёмку')}
-          </a>
+        {/* Decorative divider */}
+        <div className="reveal mt-20 flex justify-center">
+          <span
+            style={{
+              display: 'block',
+              width: '60px',
+              height: '1px',
+              background: 'oklch(0.72 0.04 60 / 0.3)',
+            }}
+          />
         </div>
       </div>
     </section>
