@@ -15,11 +15,11 @@ const faqEN = [
   },
   {
     q: 'When will I receive the photos?',
-    a: 'Within 10 days after the shoot.',
+    a: 'Up to 10 days for film, 14 days for digital photography.',
   },
   {
     q: 'Can I get the originals?',
-    a: 'Yes, upon request. Please mention in advance.',
+    a: 'Yes, upon request. Please let me know in advance.',
   },
   {
     q: 'Is fast delivery available?',
@@ -31,19 +31,19 @@ const faqEN = [
   },
   {
     q: 'Where does the shoot take place?',
-    a: 'In my studio space in Istanbul (with a French balcony).',
+    a: 'In my space in Istanbul (European-style apartment in Cihangir, with a French balcony — I send a video upon request).',
   },
   {
     q: 'Do you help with posing?',
-    a: 'Yes, I guide you throughout the shoot.',
+    a: 'Yes, I fully guide your movements during the shoot, down to precise body positioning.',
   },
   {
-    q: 'Is wardrobe available?',
-    a: 'Yes, you can use pieces from my personal wardrobe.',
+    q: 'Do you help with styling?',
+    a: 'Yes, you can use my personal wardrobe, or we pick outfits in advance from your own clothes, or buy something new.',
   },
   {
     q: 'Is makeup included?',
-    a: 'No, it\'s booked separately. I can recommend artists.',
+    a: 'No, it\'s booked separately. I can recommend makeup artists I know upon request.',
   },
 ];
 
@@ -54,11 +54,11 @@ const faqRU = [
   },
   {
     q: 'Когда будут готовы фотографии?',
-    a: 'До 10 дней после съёмки.',
+    a: 'До 10 дней после съёмки, если это плёнка, 14 дней, если цифровая фотография.',
   },
   {
     q: 'Можно ли получить исходники?',
-    a: 'Да, по запросу. Лучше обсудить заранее.',
+    a: 'Да, по запросу. Лучше сообщить мне об этом заранее.',
   },
   {
     q: 'Можно ли получить быстрее?',
@@ -70,19 +70,19 @@ const faqRU = [
   },
   {
     q: 'Где проходит съёмка?',
-    a: 'В моём пространстве в Стамбуле (есть французский балкон).',
+    a: 'В моём пространстве в Стамбуле (квартира в европейском стиле в районе Cihangir, есть французский балкон — отправляю видео по запросу).',
   },
   {
     q: 'Помогаешь ли ты с позированием?',
-    a: 'Да, я полностью направляю во время съёмки.',
+    a: 'Да, я полностью направляю ваши движения во время съёмки, вплоть до точечного положения вашего тела.',
   },
   {
-    q: 'Есть ли одежда?',
-    a: 'Да, можно использовать мой авторский гардероб.',
+    q: 'Помогаешь ли ты со стилизацией?',
+    a: 'Да, можно использовать мой авторский гардероб, либо же мы подбираем образы заранее из вещей, которые у вас есть, либо же что-то докупаем.',
   },
   {
     q: 'Визажист входит в стоимость?',
-    a: 'Нет, оплачивается отдельно. Я могу порекомендовать специалистов.',
+    a: 'Нет, оплачивается отдельно. Я могу порекомендовать своих знакомых визажистов по запросу.',
   },
 ];
 
