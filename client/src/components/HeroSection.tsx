@@ -45,7 +45,7 @@ export default function HeroSection() {
             alt="Alen Danilina — Fashion Photographer"
             className="ken-burns w-full h-full object-cover"
             style={{
-              objectPosition: window.innerWidth < 768 ? 'center center' : 'center 35%',
+              objectPosition: window.innerWidth < 768 ? 'center center' : 'center 50%',
             }}
           />
         )}

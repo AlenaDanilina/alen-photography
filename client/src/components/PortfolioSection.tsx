@@ -22,12 +22,19 @@ interface ImageItem {
 const IMAGES: ImageItem[] = [
   // === PORTRAIT ===
   {
-    src: '/manus-storage/000026аа_368ac388.webp',
+    src: '/manus-storage/0000267_d264ad8c.webp',
     alt: 'Portrait — girl at window profile',
     category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
     span: 'row-span-2',
     isPreview: true,
+  },
+  {
+    src: '/manus-storage/0000267_d264ad8c.webp',
+    alt: 'Portrait — girl at window profile',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
   },
   {
     src: '/manus-storage/305C0932_de765cbd.webp',
@@ -88,6 +95,13 @@ const IMAGES: ImageItem[] = [
     aspect: '3/4',
     span: '',
     isPreview: true,
+  },
+  {
+    src: '/manus-storage/IMG_1759_09a963bd.JPG',
+    alt: 'Model Tests — girl on floral sofa with flowers',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
   },
   {
     src: '/manus-storage/305C0648_1ff864a9.webp',
@@ -164,13 +178,7 @@ const IMAGES: ImageItem[] = [
     aspect: '3/4',
     span: '',
   },
-  {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1759_211f1e44.JPG',
-    alt: 'Fashion — floral sofa & white dress',
-    category: { en: 'Fashion', ru: 'Мода' },
-    aspect: '3/4',
-    span: '',
-  },
+
   {
     src: '/manus-storage/305C0229-11_0c067d50.webp',
     alt: 'Fashion — white blazer with heels',
