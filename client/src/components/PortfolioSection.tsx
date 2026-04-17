@@ -22,8 +22,8 @@ interface ImageItem {
 const IMAGES: ImageItem[] = [
   // === PORTRAIT ===
   {
-    src: '/manus-storage/000026_14918a2b.webp',
-    alt: 'Portrait — girl at window with city view',
+    src: '/manus-storage/000026аа_368ac388.webp',
+    alt: 'Portrait — girl at window profile',
     category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
     span: 'row-span-2',
@@ -90,6 +90,13 @@ const IMAGES: ImageItem[] = [
     isPreview: true,
   },
   {
+    src: '/manus-storage/305C0648_1ff864a9.webp',
+    alt: 'Model Tests — yellow light, silhouette',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
     src: '/manus-storage/305C1144_e669f7e6.webp',
     alt: 'Model Tests — flowing dress, movement',
     category: { en: 'Model Tests', ru: 'Модельные тесты' },
@@ -118,7 +125,27 @@ const IMAGES: ImageItem[] = [
     span: '',
     objectPosition: 'center 25%',
   },
-
+  {
+    src: '/manus-storage/305C0797_0b9981c4.webp',
+    alt: 'Model Tests — yellow light, arms up',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0262_c5d82adf.webp',
+    alt: 'Model Tests — black blazer, neutral background',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/IMG_1766_4783e032.JPG',
+    alt: 'Model Tests — white dress, flowers, sofa',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
 
   // === FASHION ===
   {
@@ -133,13 +160,6 @@ const IMAGES: ImageItem[] = [
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000015_0c5486e6.webp',
     alt: 'Fashion — bold pose & red tights',
-    category: { en: 'Fashion', ru: 'Мода' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/DSC05829-32_1a007cc2.webp',
-    alt: 'Fashion — winter shearling & sunglasses',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
@@ -180,6 +200,13 @@ const IMAGES: ImageItem[] = [
     span: '',
   },
   {
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/DSC05829-32_1a007cc2.webp',
+    alt: 'Fashion — winter shearling & sunglasses',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
     src: '/manus-storage/DSC06447_c35ab7fd.webp',
     alt: 'Fashion — snow, sitting in leather jacket',
     category: { en: 'Fashion', ru: 'Мода' },
@@ -189,13 +216,6 @@ const IMAGES: ImageItem[] = [
   {
     src: '/manus-storage/Untitled-(3)-(4)_2ef21731.webp',
     alt: 'Fashion — polaroid, beach sunset',
-    category: { en: 'Fashion', ru: 'Мода' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: '/manus-storage/Untitled-(6)_5f89f988.webp',
-    alt: 'Fashion — polaroid, back view ocean',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
