@@ -71,6 +71,48 @@ const IMAGES: ImageItem[] = [
     aspect: '3/4',
     span: '',
   },
+  {
+    src: '/manus-storage/000052_1598e0ed.webp',
+    alt: 'Portrait — girl on sofa, warm light',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000021_ffe8bb51.webp',
+    alt: 'Portrait — natural smile, plants background',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000028_c42afaac.webp',
+    alt: 'Portrait — blue sweater, wooden floor',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000032_53a58127.webp',
+    alt: 'Portrait — blue sweater & flowing skirt',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000023_736cee82.webp',
+    alt: 'Portrait — sequin top, golden light',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0570_24e4db09.webp',
+    alt: 'Portrait — dark coat, profile shot',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
 ];
 
 const CATEGORIES_EN = ['All', 'Fashion', 'Portrait', 'Editorial'];
@@ -179,7 +221,7 @@ export default function PortfolioSection() {
           </div>
         </div>
 
-        {/* Grid — 3 columns for All view (3 preview images), 2 columns for category views */}
+        {/* Grid — 3 columns for All view, 2 columns for category views */}
         <div
           ref={gridRef}
           className={`grid grid-cols-1 gap-4 md:gap-5 ${
@@ -187,11 +229,14 @@ export default function PortfolioSection() {
               ? 'md:grid-cols-3'
               : 'md:grid-cols-2'
           }`}
+          style={{
+            justifyItems: 'center',
+          }}
         >
           {filteredImages.map((img, i) => (
             <div
               key={`${activeCategory}-${img.src}`}
-              className={`reveal portfolio-item${activeCategory === 0 ? ' cursor-pointer' : ''}`}
+              className={`reveal portfolio-item w-full${activeCategory === 0 ? ' cursor-pointer' : ''}`}
               style={{
                 transitionDelay: `${i * 0.12}s`,
                 aspectRatio: '3/4',
