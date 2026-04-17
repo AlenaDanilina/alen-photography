@@ -76,16 +76,16 @@ const IMAGES: ImageItem[] = [
 
   // === MODEL TESTS ===
   {
-    src: '/manus-storage/305C1144_e669f7e6.webp',
-    alt: 'Model Tests — flowing dress, movement',
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1758_56bda2f1.JPG',
+    alt: 'Model Tests — chandelier & white dress on sofa',
     category: { en: 'Model Tests', ru: 'Модельные тесты' },
     aspect: '3/4',
     span: '',
     isPreview: true,
   },
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1758_56bda2f1.JPG',
-    alt: 'Model Tests — chandelier & white dress',
+    src: '/manus-storage/305C1144_e669f7e6.webp',
+    alt: 'Model Tests — flowing dress, movement',
     category: { en: 'Model Tests', ru: 'Модельные тесты' },
     aspect: '3/4',
     span: '',
@@ -98,18 +98,19 @@ const IMAGES: ImageItem[] = [
     span: '',
   },
   {
-    src: '/manus-storage/305C0688-1_8692edc1.webp',
-    alt: 'Model Tests — sitting on vintage trunk',
-    category: { en: 'Model Tests', ru: 'Модельные тесты' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
     src: '/manus-storage/Scan-1333_1868298f.webp',
     alt: 'Model Tests — double polaroid',
     category: { en: 'Model Tests', ru: 'Модельные тесты' },
     aspect: '3/4',
     span: '',
+  },
+  {
+    src: '/manus-storage/305C0688-1_8692edc1.webp',
+    alt: 'Model Tests — sitting on vintage trunk',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+    objectPosition: 'center 25%',
   },
   {
     src: '/manus-storage/305C0932_e55092c0.webp',
@@ -121,16 +122,17 @@ const IMAGES: ImageItem[] = [
 
   // === FASHION ===
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000015_0c5486e6.webp',
-    alt: 'Fashion — bold pose & red tights',
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000014_879d066f.webp',
+    alt: 'Fashion — black dress & fur collar',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
     isPreview: true,
+    objectPosition: 'center 20%',
   },
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000014_879d066f.webp',
-    alt: 'Fashion — black dress & fur collar',
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000015_0c5486e6.webp',
+    alt: 'Fashion — bold pose & red tights',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
