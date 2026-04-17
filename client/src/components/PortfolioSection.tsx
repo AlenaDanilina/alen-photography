@@ -16,9 +16,11 @@ interface ImageItem {
   aspect: string;
   span: string;
   isPreview?: boolean; // marks the representative image for "All" view
+  objectPosition?: string; // custom object-position for cropping
 }
 
 const IMAGES: ImageItem[] = [
+  // === PORTRAIT ===
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000025_05c7a7a3.jpg',
     alt: 'Portrait — soft natural light',
@@ -26,15 +28,98 @@ const IMAGES: ImageItem[] = [
     aspect: '3/4',
     span: 'row-span-2',
     isPreview: true,
+    objectPosition: 'center 30%',
   },
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1758_56bda2f1.JPG',
-    alt: 'Editorial — chandelier & white dress',
-    category: { en: 'Editorial', ru: 'Эдиториал' },
+    src: '/manus-storage/000052_1598e0ed.webp',
+    alt: 'Portrait — girl on sofa, warm light',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000021_ffe8bb51.webp',
+    alt: 'Portrait — natural smile, plants background',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000028_c42afaac.webp',
+    alt: 'Portrait — blue sweater, wooden floor',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000032_53a58127.webp',
+    alt: 'Portrait — blue sweater & flowing skirt',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/000023_736cee82.webp',
+    alt: 'Portrait — sequin top, golden light',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+    objectPosition: 'center 20%',
+  },
+  {
+    src: '/manus-storage/305C0570_24e4db09.webp',
+    alt: 'Portrait — dark coat, profile shot',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
+  },
+
+  // === MODEL TESTS ===
+  {
+    src: '/manus-storage/305C1144_e669f7e6.webp',
+    alt: 'Model Tests — flowing dress, movement',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
     aspect: '3/4',
     span: '',
     isPreview: true,
   },
+  {
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1758_56bda2f1.JPG',
+    alt: 'Model Tests — chandelier & white dress',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/Scan-18_20e2ac6d.webp',
+    alt: 'Model Tests — polaroid, black outfit',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0688-1_8692edc1.webp',
+    alt: 'Model Tests — sitting on vintage trunk',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/Scan-1333_1868298f.webp',
+    alt: 'Model Tests — double polaroid',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0932_e55092c0.webp',
+    alt: 'Model Tests — freckles, b&w portrait',
+    category: { en: 'Model Tests', ru: 'Модельные тесты' },
+    aspect: '3/4',
+    span: '',
+  },
+
+  // === FASHION ===
   {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000015_0c5486e6.webp',
     alt: 'Fashion — bold pose & red tights',
@@ -71,52 +156,10 @@ const IMAGES: ImageItem[] = [
     aspect: '3/4',
     span: '',
   },
-  {
-    src: '/manus-storage/000052_1598e0ed.webp',
-    alt: 'Portrait — girl on sofa, warm light',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: '/manus-storage/000021_ffe8bb51.webp',
-    alt: 'Portrait — natural smile, plants background',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: '/manus-storage/000028_c42afaac.webp',
-    alt: 'Portrait — blue sweater, wooden floor',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: '/manus-storage/000032_53a58127.webp',
-    alt: 'Portrait — blue sweater & flowing skirt',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: '/manus-storage/000023_736cee82.webp',
-    alt: 'Portrait — sequin top, golden light',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
-    src: '/manus-storage/305C0570_24e4db09.webp',
-    alt: 'Portrait — dark coat, profile shot',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
 ];
 
-const CATEGORIES_EN = ['All', 'Fashion', 'Portrait', 'Editorial'];
-const CATEGORIES_RU = ['Все', 'Мода', 'Портрет', 'Эдиториал'];
+const CATEGORIES_EN = ['All', 'Fashion', 'Portrait', 'Model Tests'];
+const CATEGORIES_RU = ['Все', 'Мода', 'Портрет', 'Модельные тесты'];
 
 export default function PortfolioSection() {
   const { t, lang } = useLanguage();
@@ -248,19 +291,11 @@ export default function PortfolioSection() {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                style={{ aspectRatio: '3/4' }}
+                style={{
+                  aspectRatio: '3/4',
+                  objectPosition: img.objectPosition || 'center center',
+                }}
               />
-              {/* Category caption — only in category view, not All */}
-              {activeCategory !== 0 && (
-                <div className="caption">
-                  <span
-                    className="label-editorial"
-                    style={{ color: 'rgba(248,246,242,0.8)', fontSize: '0.6rem' }}
-                  >
-                    {lang === 'en' ? img.category.en : img.category.ru}
-                  </span>
-                </div>
-              )}
 
               {/* "View collection" overlay for All view — visible on hover */}
               {activeCategory === 0 && (
