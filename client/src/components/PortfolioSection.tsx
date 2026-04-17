@@ -1,7 +1,7 @@
 /*
  * PORTFOLIO SECTION — Alen Danilina Portfolio
  * Design: Masonry-style grid, large images, generous whitespace
- * All tab: shows one representative image per category; clicking opens that category
+ * Featured tab: shows one representative image per category; clicking opens that category
  * Category tabs: show all images in that category
  */
 
@@ -15,19 +15,26 @@ interface ImageItem {
   category: { en: string; ru: string };
   aspect: string;
   span: string;
-  isPreview?: boolean; // marks the representative image for "All" view
+  isPreview?: boolean; // marks the representative image for "featured" view
   objectPosition?: string; // custom object-position for cropping
 }
 
 const IMAGES: ImageItem[] = [
   // === PORTRAIT ===
   {
-    src: '/manus-storage/305C0932_f27c22ba.webp',
-    alt: 'Portrait — freckles, natural light',
+    src: '/manus-storage/000026_14918a2b.webp',
+    alt: 'Portrait — girl at window with city view',
     category: { en: 'Portrait', ru: 'Портрет' },
     aspect: '3/4',
     span: 'row-span-2',
     isPreview: true,
+  },
+  {
+    src: '/manus-storage/305C0932_de765cbd.webp',
+    alt: 'Portrait — freckles, natural light',
+    category: { en: 'Portrait', ru: 'Портрет' },
+    aspect: '3/4',
+    span: '',
   },
   {
     src: '/manus-storage/000052_1598e0ed.webp',
@@ -131,13 +138,6 @@ const IMAGES: ImageItem[] = [
     span: '',
   },
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1759_211f1e44.JPG',
-    alt: 'Fashion — floral sofa & white dress',
-    category: { en: 'Fashion', ru: 'Мода' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
     src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/DSC05829-32_1a007cc2.webp',
     alt: 'Fashion — winter shearling & sunglasses',
     category: { en: 'Fashion', ru: 'Мода' },
@@ -145,8 +145,29 @@ const IMAGES: ImageItem[] = [
     span: '',
   },
   {
-    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0248fff_36880a9c.webp',
-    alt: 'Fashion — white blazer & wet hair',
+    src: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/IMG_1759_211f1e44.JPG',
+    alt: 'Fashion — floral sofa & white dress',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0229-11_0c067d50.webp',
+    alt: 'Fashion — white blazer with heels',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0184_93dcf650.webp',
+    alt: 'Fashion — white blazer dress, bold shoulders',
+    category: { en: 'Fashion', ru: 'Мода' },
+    aspect: '3/4',
+    span: '',
+  },
+  {
+    src: '/manus-storage/305C0217_93c38b25.webp',
+    alt: 'Fashion — white top on tan sofa',
     category: { en: 'Fashion', ru: 'Мода' },
     aspect: '3/4',
     span: '',
@@ -181,8 +202,8 @@ const IMAGES: ImageItem[] = [
   },
 ];
 
-const CATEGORIES_EN = ['All', 'Fashion', 'Portrait', 'Model Tests'];
-const CATEGORIES_RU = ['Все', 'Мода', 'Портрет', 'Модельные тесты'];
+const CATEGORIES_EN = ['featured', 'Fashion', 'Portrait', 'Model Tests'];
+const CATEGORIES_RU = ['избранное', 'Мода', 'Портрет', 'Модельные тесты'];
 
 export default function PortfolioSection() {
   const { t, lang } = useLanguage();
@@ -192,7 +213,7 @@ export default function PortfolioSection() {
 
   const categories = lang === 'en' ? CATEGORIES_EN : CATEGORIES_RU;
 
-  // "All" view: show only preview images (one per category)
+  // "featured" view: show only preview images (one per category)
   // Category view: show all images in that category
   const filteredImages = activeCategory === 0
     ? IMAGES.filter((img) => img.isPreview)
@@ -210,7 +231,7 @@ export default function PortfolioSection() {
 
   const handleImageClick = (img: ImageItem) => {
     if (activeCategory === 0) {
-      // In "All" view, clicking navigates to that category
+      // In "featured" view, clicking navigates to that category
       const idx = getCategoryIndex(img);
       if (idx > 0) setActiveCategory(idx);
     }
@@ -260,7 +281,7 @@ export default function PortfolioSection() {
                 color: 'oklch(0.977 0.005 75)',
               }}
             >
-              {t('Selected Work', 'Избранные работы')}
+              {t('Selected Works', 'Избранные работы')}
             </h2>
           </div>
 
@@ -287,7 +308,7 @@ export default function PortfolioSection() {
           </div>
         </div>
 
-        {/* Grid — 3 columns for All view, 2 columns for category views */}
+        {/* Grid — 3 columns for featured view, 2 columns for category views */}
         <div
           ref={gridRef}
           className={`grid grid-cols-1 gap-4 md:gap-5 ${
@@ -320,7 +341,7 @@ export default function PortfolioSection() {
                 }}
               />
 
-              {/* "View collection" overlay for All view — visible on hover */}
+              {/* "View collection" overlay for featured view — visible on hover */}
               {activeCategory === 0 && (
                 <div
                   className="portfolio-overlay"
@@ -348,25 +369,23 @@ export default function PortfolioSection() {
                       fontWeight: 300,
                     }}
                   >
-                    {lang === 'en' ? img.category.en : img.category.ru}
-                  </span>
-                  <span
-                    className="label-editorial"
-                    style={{
-                      color: 'oklch(0.72 0.04 60)',
-                      fontSize: '0.5625rem',
-                    }}
-                  >
-                    {t('View collection →', 'Смотреть →')}
+                    {lang === 'en'
+                      ? img.category.en
+                      : img.category.ru}
                   </span>
                 </div>
               )}
             </div>
           ))}
         </div>
-
-
       </div>
+
+      {/* Hover effect for overlay */}
+      <style>{`
+        .portfolio-item:hover .portfolio-overlay {
+          opacity: 1 !important;
+        }
+      `}</style>
     </section>
   );
 }

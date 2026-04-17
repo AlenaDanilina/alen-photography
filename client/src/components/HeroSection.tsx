@@ -7,7 +7,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 
-const HERO_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/000026_cropped_c918b707.jpg';
+const HERO_IMAGE = '/manus-storage/305C0932_de765cbd.webp';
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -73,7 +73,7 @@ export default function HeroSection() {
               transitionDelay: '0s',
             }}
           >
-            {t('Istanbul', 'Стамбул')} / {t('Portraits Fashion Editorial', 'Портреты Мода Эдиториал')}
+            {t('Istanbul', 'Стамбул')} / {t('Portraits Fashion Model Tests', 'Портреты Мода Модельные тесты')}
           </p>
 
           {/* Name */}

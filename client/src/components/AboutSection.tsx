@@ -76,7 +76,7 @@ export default function AboutSection() {
                     I usually shoot on film, digital, and Polaroid.
                   </p>
                   <p>
-                    I'm based in Istanbul and work in my own studio space, where we can create the right mood and feel ourselves comfortable.
+                    I'm based in Istanbul and work in my own studio space, where we can create the right mood and feel at ease.
                   </p>
                 </>
               ) : (
@@ -87,7 +87,7 @@ export default function AboutSection() {
                     Обычно я снимаю на плёнку, цифру и поларойд.
                   </p>
                   <p>
-                    Я работаю в Стамбуле, в своём пространстве, где мы можем спокойно создать нужную атмосферу и чувствовать себя комфортно.
+                    Я работаю в Стамбуле, в своём пространстве, где мы можем спокойно создать нужную атмосферу и чувствовать себя свободно.
                   </p>
                 </>
               )}
