@@ -70,10 +70,10 @@ export default function AboutSection() {
             >
               {lang === 'en' ? (
                 <>
-                  <p>I'm a photographer working with portraits, model tests, and brand shoots.</p>
+                  <p>I'm Alen, a photographer working with portraits, model tests, and brand shoots.</p>
                   <p>
                     My focus is on light, aesthetics, and capturing a natural yet intentional presence in the frame.
-                    I shoot both on film and digital.
+                    I usually shoot on film, digital, and Polaroid.
                   </p>
                   <p>
                     I'm based in Istanbul and work in my own studio space, where we can create the right mood and feel ourselves comfortable.
@@ -81,10 +81,10 @@ export default function AboutSection() {
                 </>
               ) : (
                 <>
-                  <p>Я — фотограф, работающий с портретами, модельными тестами и съёмками для брендов.</p>
+                  <p>Я — Алена, фотограф, работающий с портретами, модельными тестами и съёмками для брендов.</p>
                   <p>
                     Для меня важна эстетика, свет и ощущение человека в кадре.
-                    Я снимаю на плёнку и цифру.
+                    Обычно я снимаю на плёнку, цифру и поларойд.
                   </p>
                   <p>
                     Я работаю в Стамбуле, в своём пространстве, где мы можем спокойно создать нужную атмосферу и чувствовать себя комфортно.
