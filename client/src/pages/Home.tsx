@@ -1,13 +1,14 @@
 /*
  * HOME PAGE — Alen Danilina Portfolio
  * Design: Cinematic editorial — Dazed & Confused, Vogue Italia
- * Sections: Hero → About → Portfolio → Pricing → FAQ → Contact
+ * Sections: Hero → About → Portfolio → Client Gallery → Pricing → FAQ → Contact
  */
 
 import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import PortfolioSection from '@/components/PortfolioSection';
+import ClientGallerySection from '@/components/ClientGallerySection';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
@@ -21,6 +22,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <PortfolioSection />
+        <ClientGallerySection />
         <PricingSection />
         <FAQSection />
         <ContactSection />
