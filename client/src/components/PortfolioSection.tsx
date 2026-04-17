@@ -30,13 +30,6 @@ const IMAGES: ImageItem[] = [
     isPreview: true,
   },
   {
-    src: '/manus-storage/0000267_d264ad8c.webp',
-    alt: 'Portrait — girl at window profile',
-    category: { en: 'Portrait', ru: 'Портрет' },
-    aspect: '3/4',
-    span: '',
-  },
-  {
     src: '/manus-storage/305C0932_de765cbd.webp',
     alt: 'Portrait — freckles, natural light',
     category: { en: 'Portrait', ru: 'Портрет' },
@@ -350,7 +343,7 @@ export default function PortfolioSection() {
         >
           {filteredImages.map((img, i) => (
             <div
-              key={`${activeCategory}-${img.src}`}
+              key={`${activeCategory}-${i}`}
               className={`reveal portfolio-item w-full${activeCategory === 0 ? ' cursor-pointer' : ''}`}
               style={{
                 transitionDelay: `${i * 0.12}s`,
