@@ -121,7 +121,7 @@ export default function PricingSection() {
 
             {/* CTA */}
             <div className="reveal reveal-delay-3">
-              <a href="#contact" className="btn-editorial">
+              <a href="#contact" className="btn-rounded-ghost">
                 {t('Book a shoot', 'Записаться')}
               </a>
             </div>

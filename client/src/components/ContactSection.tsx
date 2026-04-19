@@ -72,7 +72,7 @@ export default function ContactSection() {
           <div className="reveal reveal-delay-3 mb-16">
             <a
               href="mailto:alyondanilin32@gmail.com"
-              className="btn-editorial-ghost"
+              className="btn-rounded-ghost"
             >
               {t('Book a shoot', 'Записаться')}
             </a>

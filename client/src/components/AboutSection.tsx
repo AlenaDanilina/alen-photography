@@ -1,7 +1,8 @@
 /*
  * ABOUT SECTION — Alen Danilina Portfolio
- * Design: Split panel — image left (offset), text right
- * Light background → dark text
+ * Design: Elegant, personal narrative with philosophy
+ * Inspired by: Lisa Karim's approach — capturing character, story, essence
+ * Light background → dark text, serif typography
  */
 
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,11 +15,30 @@ export default function AboutSection() {
   const ref = useReveal();
 
   return (
-    <section id="about" className="py-28 md:py-40 overflow-hidden" ref={ref}>
+    <section id="about" className="py-28 md:py-40 overflow-hidden" ref={ref} style={{ background: 'oklch(0.977 0.005 75)' }}>
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+        {/* Personal greeting */}
+        <div className="reveal mb-20 md:mb-28">
+          <p
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+              fontStyle: 'italic',
+              fontWeight: 400,
+              color: 'oklch(0.4 0.01 60)',
+              lineHeight: 1.8,
+            }}
+          >
+            {lang === 'en' ? (
+              <>Hello, this is <span style={{ fontWeight: 600 }}>Alen Danilina</span>'s page.</>
+            ) : (
+              <>Привет, это страница <span style={{ fontWeight: 600 }}>Алены Данилиной</span>.</>
+            )}
+          </p>
+        </div>
 
-          {/* Image — left, slightly taller */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+          {/* Left: Image */}
           <div className="reveal relative">
             <div
               className="portfolio-item"
@@ -30,36 +50,34 @@ export default function AboutSection() {
                 loading="lazy"
               />
             </div>
-            {/* Ghost text behind image */}
-            <span
-              className="ghost-text"
-              style={{ bottom: '-1rem', left: '-1rem', zIndex: -1 }}
-            >
-              {t('Film', 'Плёнка')}
-            </span>
           </div>
 
-          {/* Text — right, offset down */}
-          <div className="md:pt-20">
-            {/* Section label */}
-            <div className="reveal flex items-center gap-4 mb-8">
-              <span className="deco-line" />
-              <span className="label-editorial" style={{ color: 'oklch(0.72 0.04 60)' }}>
-                {t('About', 'Обо мне')}
-              </span>
-            </div>
-
-            {/* Heading */}
+          {/* Right: Text and philosophy */}
+          <div className="md:pt-8">
+            {/* Main heading */}
             <h2
-              className="reveal reveal-delay-1 heading-display mb-8"
-              style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontStyle: 'italic' }}
+              className="reveal reveal-delay-1 mb-8"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                lineHeight: 1.2,
+                color: 'oklch(0.14 0.005 60)',
+              }}
             >
-              {t('Light, aesthetics,\nand presence.', 'Свет, эстетика\nи присутствие.')}
+              {lang === 'en' ? 'My goal is to capture you,' : 'Моя цель — запечатлеть вас,'}
+              <br />
+              {lang === 'en' ? 'your character, your story,' : 'ваш характер, вашу историю,'}
+              <br />
+              <span style={{ textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '0.3em' }}>
+                {lang === 'en' ? 'your special essence' : 'вашу особенную сущность'}
+              </span>
             </h2>
 
             {/* Body text */}
             <div
-              className="reveal reveal-delay-2 space-y-5"
+              className="reveal reveal-delay-2 space-y-6 mb-10"
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
@@ -70,38 +88,47 @@ export default function AboutSection() {
             >
               {lang === 'en' ? (
                 <>
-                  <p>I'm Alen, a photographer working with portraits, model tests, and brand shoots.</p>
                   <p>
-                    My focus is on light, aesthetics, and capturing a natural yet intentional presence in the frame.
-                    I usually shoot on film, digital, and Polaroid.
+                    As long as I can remember, photography has always been in my life. I tried a lot of different types of photography and understood that <span style={{ fontStyle: 'italic' }}>portrait genre was my passion</span> because it is the most honest and frank one.
                   </p>
                   <p>
-                    I'm based in Istanbul and work in my own studio space, where we can create the right mood and feel at ease.
+                    My photographs are candid but elegant and sophisticated. I want to take really stylish, natural and <span style={{ textDecoration: 'underline' }}>timeless photos</span> of you.
+                  </p>
+                  <p>
+                    I'm based in Istanbul, working in my own studio space where we can create the right atmosphere and feel at ease.
                   </p>
                 </>
               ) : (
                 <>
-                  <p>Я — Алена, фотограф, работающий с портретами, модельными тестами и съёмками для брендов.</p>
                   <p>
-                    Для меня важна эстетика, свет и ощущение человека в кадре.
-                    Обычно я снимаю на плёнку, цифру и поларойд.
+                    Сколько я себя помню, фотография всегда была в моей жизни. Я пробовала разные виды фотографии и поняла, что <span style={{ fontStyle: 'italic' }}>портретный жанр — моя страсть</span>, потому что это самый честный и откровенный жанр.
                   </p>
                   <p>
-                    Я работаю в Стамбуле, в своём пространстве, где мы можем спокойно создать нужную атмосферу и чувствовать себя свободно.
+                    Мои фотографии — откровенные, но элегантные и изысканные. Я хочу создавать стильные, естественные и <span style={{ textDecoration: 'underline' }}>вечные фотографии</span> вас.
+                  </p>
+                  <p>
+                    Я работаю в Стамбуле, в своей студии, где мы можем создать нужную атмосферу и чувствовать себя свободно.
                   </p>
                 </>
               )}
             </div>
 
-            {/* Signature detail */}
-            <div className="reveal reveal-delay-3 mt-10 flex items-center gap-6">
-              <span className="deco-line" />
-              <span
-                className="heading-display"
-                style={{ fontSize: '1.25rem', fontStyle: 'italic', color: 'oklch(0.72 0.04 60)' }}
+            {/* Closing signature */}
+            <div className="reveal reveal-delay-3">
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: '1rem',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  color: 'oklch(0.4 0.01 60)',
+                  lineHeight: 1.8,
+                }}
               >
-                {t('Istanbul, Turkey', 'Стамбул, Турция')}
-              </span>
+                {lang === 'en' ? 'Looking forward to working with you' : 'С нетерпением жду работы с вами'}
+                <br />
+                <span style={{ fontWeight: 600 }}>Alen</span>
+              </p>
             </div>
           </div>
         </div>

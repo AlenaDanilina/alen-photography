@@ -1,13 +1,15 @@
 /*
  * HERO SECTION — Alen Danilina Portfolio
- * Design: Full-viewport, text anchored lower-left, Ken Burns on image
- * Dark image → white text (high contrast)
+ * Design: Split layout inspired by Vercel version
+ * Desktop: Two images side-by-side with centered text
+ * Mobile: Single image with text overlay
  */
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 
-const HERO_IMAGE = '/manus-storage/305C0932-hq_80d09f15.webp';
+const HERO_IMAGE_LEFT = '/manus-storage/305C0932-hq_80d09f15.webp';
+const HERO_IMAGE_RIGHT = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/310519663565548147_3f8e2c2c.webp';
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -15,116 +17,226 @@ export default function HeroSection() {
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
-    const img = new Image();
-    img.src = HERO_IMAGE;
-    img.onload = () => {
-      setLoaded(true);
-      setTimeout(() => setTextVisible(true), 300);
-    };
-    // Fallback if image fails
-    img.onerror = () => {
-      setLoaded(true);
-      setTimeout(() => setTextVisible(true), 300);
-    };
+    setLoaded(true);
+    setTimeout(() => setTextVisible(true), 300);
   }, []);
 
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden grain-overlay"
+      className="relative w-full overflow-hidden"
       style={{ height: '100svh', minHeight: '600px' }}
     >
-      {/* Background image with Ken Burns */}
-      <div
-        className="absolute inset-0 bg-[#1A1A1A]"
-        style={{ transition: 'opacity 1.2s ease' }}
-      >
-        {loaded && (
-          <img
-            src={HERO_IMAGE}
-            alt="Alen Danilina — Fashion Photographer"
-            className="ken-burns w-full h-full object-cover"
+      {/* Desktop: Split layout */}
+      <div className="hidden md:flex h-full">
+        {/* Left image */}
+        <div className="flex-1 relative overflow-hidden bg-[#1A1A1A]">
+          {loaded && (
+            <img
+              src={HERO_IMAGE_LEFT}
+              alt="Alen Danilina"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center 55%' }}
+            />
+          )}
+          {/* Vignette */}
+          <div
+            className="absolute inset-0"
             style={{
-              objectPosition: window.innerWidth < 768 ? 'center center' : 'center 55%',
+              background: 'linear-gradient(to top, rgba(26,26,26,0.5) 0%, rgba(26,26,26,0) 50%)',
             }}
           />
-        )}
-        {/* Vignette overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(to top, rgba(26,26,26,0.75) 0%, rgba(26,26,26,0.1) 50%, rgba(26,26,26,0.3) 100%)',
-          }}
-        />
-      </div>
+        </div>
 
-      {/* Content — lower left */}
-      <div className="relative h-full flex flex-col justify-end pb-16 md:pb-20 px-6 md:px-16 lg:px-24">
+        {/* Center text overlay */}
         <div
+          className="absolute inset-0 flex flex-col items-center justify-center z-10"
           style={{
             opacity: textVisible ? 1 : 0,
             transform: textVisible ? 'translateY(0)' : 'translateY(32px)',
             transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1)',
           }}
         >
-          {/* Label */}
+          {/* Subtitle */}
           <p
-            className="label-editorial mb-4 md:mb-6"
             style={{
+              fontFamily: "'Jost', sans-serif",
+              fontWeight: 300,
+              fontSize: '0.75rem',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
               color: 'rgba(248,246,242,0.6)',
+              marginBottom: '3rem',
               transitionDelay: '0s',
             }}
           >
-            {t('Istanbul', 'Стамбул')} / {t('Portraits Fashion Model Tests', 'Портреты Мода Модельные тесты')}
+            {t('Istanbul / Portraits Fashion Model Tests', 'Стамбул / Портреты Мода Модельные тесты')}
           </p>
 
-          {/* Name */}
-          <h1
-            className="heading-display text-white mb-2"
+          {/* Main heading */}
+          <div
             style={{
-              fontSize: 'clamp(3rem, 8vw, 7rem)',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              letterSpacing: '-0.01em',
+              textAlign: 'center',
+              marginBottom: '2rem',
               opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(20px)',
               transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.1s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.1s',
             }}
           >
-            Alen Danilina
-          </h1>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '4rem',
+                fontWeight: 400,
+                color: 'oklch(0.977 0.005 75)',
+                margin: '0 0 0.5rem 0',
+                lineHeight: 1,
+              }}
+            >
+              PHOTO
+            </p>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '4rem',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                color: 'oklch(0.977 0.005 75)',
+                margin: 0,
+                lineHeight: 1,
+              }}
+            >
+              ABOUT YOU
+            </p>
+          </div>
 
-          {/* Subtitle */}
+          {/* Name */}
           <p
-            className="label-editorial mb-10 md:mb-12"
             style={{
+              fontFamily: "'Jost', sans-serif",
+              fontSize: '0.875rem',
+              letterSpacing: '0.1em',
               color: 'rgba(248,246,242,0.7)',
+              textTransform: 'uppercase',
               opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
               transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.2s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.2s',
             }}
           >
-            {t('Photographer', 'Фотограф')}
+            ALEN DANILINA
           </p>
+        </div>
 
-          {/* CTA */}
+        {/* Right image */}
+        <div className="flex-1 relative overflow-hidden bg-[#1A1A1A]">
+          {loaded && (
+            <img
+              src={HERO_IMAGE_RIGHT}
+              alt="Alen Danilina — Portraits"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center center' }}
+            />
+          )}
+          {/* Vignette */}
           <div
+            className="absolute inset-0"
             style={{
-              opacity: textVisible ? 1 : 0,
-              transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
-              transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.35s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.35s',
+              background: 'linear-gradient(to top, rgba(26,26,26,0.5) 0%, rgba(26,26,26,0) 50%)',
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Mobile: Single image */}
+      <div className="md:hidden h-full relative bg-[#1A1A1A]">
+        {loaded && (
+          <img
+            src={HERO_IMAGE_LEFT}
+            alt="Alen Danilina"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 55%' }}
+          />
+        )}
+        {/* Vignette */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to top, rgba(26,26,26,0.75) 0%, rgba(26,26,26,0.1) 50%, rgba(26,26,26,0.3) 100%)',
+          }}
+        />
+
+        {/* Mobile text overlay */}
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-end pb-16 px-6"
+          style={{
+            opacity: textVisible ? 1 : 0,
+            transform: textVisible ? 'translateY(0)' : 'translateY(32px)',
+            transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1)',
+          }}
+        >
+          {/* Subtitle */}
+          <p
+            style={{
+              fontFamily: "'Jost', sans-serif",
+              fontWeight: 300,
+              fontSize: '0.65rem',
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: 'rgba(248,246,242,0.6)',
+              marginBottom: '2rem',
+              textAlign: 'center',
             }}
           >
-            <a href="#contact" className="btn-editorial-ghost">
-              {t('Book a shoot', 'Записаться')}
-            </a>
+            {t('Istanbul / Portraits Fashion Model Tests', 'Стамбул / Портреты Мода Модельные тесты')}
+          </p>
+
+          {/* Main heading */}
+          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '2.5rem',
+                fontWeight: 400,
+                color: 'oklch(0.977 0.005 75)',
+                margin: '0 0 0.25rem 0',
+                lineHeight: 1,
+              }}
+            >
+              PHOTO
+            </p>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '2.5rem',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                color: 'oklch(0.977 0.005 75)',
+                margin: 0,
+                lineHeight: 1,
+              }}
+            >
+              ABOUT YOU
+            </p>
           </div>
+
+          {/* Name */}
+          <p
+            style={{
+              fontFamily: "'Jost', sans-serif",
+              fontSize: '0.75rem',
+              letterSpacing: '0.08em',
+              color: 'rgba(248,246,242,0.7)',
+              textTransform: 'uppercase',
+            }}
+          >
+            ALEN DANILINA
+          </p>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-8 right-8 md:right-16 lg:right-24 flex flex-col items-center gap-2"
+        className="absolute bottom-8 right-8 md:right-16 flex flex-col items-center gap-2 z-20"
         style={{
           opacity: textVisible ? 0.5 : 0,
           transition: 'opacity 1s ease 0.8s',
@@ -133,19 +245,6 @@ export default function HeroSection() {
         <span className="label-editorial text-white" style={{ fontSize: '0.5625rem' }}>
           {t('Scroll', 'Листать')}
         </span>
-        <div
-          className="w-px bg-white"
-          style={{
-            height: '3rem',
-            animation: 'scrollLine 2s ease-in-out infinite',
-          }}
-        />
-        <style>{`
-          @keyframes scrollLine {
-            0%, 100% { transform: scaleY(1); opacity: 0.5; }
-            50% { transform: scaleY(0.4); opacity: 0.2; }
-          }
-        `}</style>
       </div>
     </section>
   );

@@ -44,22 +44,33 @@ export default function NavBar() {
           className="container flex items-center justify-between"
           style={{ paddingTop: '1.25rem', paddingBottom: '1.25rem' }}
         >
-          {/* Logo / Name */}
+          {/* Logo - Circular A */}
           <a
             href="#hero"
-            className="heading-display transition-opacity duration-300"
+            className="transition-opacity duration-300"
             style={{
-              fontSize: '1.125rem',
-              fontStyle: 'italic',
-              fontWeight: 400,
-              color: 'rgba(248,246,242,0.95)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              border: '1.5px solid rgba(248,246,242,0.6)',
               textDecoration: 'none',
-              letterSpacing: '0.01em',
+              fontSize: '1.125rem',
+              fontWeight: 600,
+              color: 'rgba(248,246,242,0.95)',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = 'rgba(248,246,242,0.95)';
+              e.currentTarget.style.opacity = '0.8';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = 'rgba(248,246,242,0.6)';
+              e.currentTarget.style.opacity = '1';
+            }}
           >
-            Alen Danilina
+            A
           </a>
 
           {/* Desktop nav */}
