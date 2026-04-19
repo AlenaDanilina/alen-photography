@@ -151,7 +151,7 @@ export default function HeroSection() {
           }}
         >
           <a href="#contact" className="btn-rounded-ghost">
-            {t('Get in touch', 'Оставить запрос')} →
+            {t('Get in touch', 'Написать')} →
           </a>
         </div>
 
@@ -304,7 +304,7 @@ export default function HeroSection() {
               href="#contact"
               className="btn-rounded-ghost"
             >
-              {t('Get in touch', 'Оставить запрос')}
+              {t('Get in touch', 'Написать')}
             </a>
           </div>
         </div>
