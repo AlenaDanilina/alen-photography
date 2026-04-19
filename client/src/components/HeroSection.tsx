@@ -299,12 +299,14 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Button */}
-          <a
-            href="#contact"
-            className="btn-rounded-ghost"
-          >
-            {t('Get in touch', 'Оставить запрос')}
-          </a>
+          <div className="w-fit">
+            <a
+              href="#contact"
+              className="btn-rounded-ghost"
+            >
+              {t('Get in touch', 'Оставить запрос')}
+            </a>
+          </div>
         </div>
       </div>
     </section>
