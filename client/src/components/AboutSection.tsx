@@ -1,7 +1,6 @@
 /*
  * ABOUT SECTION — Alen Danilina Portfolio
- * Design: Elegant, personal narrative with philosophy
- * Inspired by: Lisa Karim's approach — capturing character, story, essence
+ * Design: Elegant, personal narrative
  * Light background → dark text, serif typography
  */
 
@@ -17,24 +16,20 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-28 md:py-40 overflow-hidden" ref={ref} style={{ background: 'oklch(0.977 0.005 75)' }}>
       <div className="container">
-        {/* Personal greeting */}
+        {/* Section heading */}
         <div className="reveal mb-20 md:mb-28">
-          <p
+          <h2
             style={{
               fontFamily: "'Cormorant Garamond', serif",
-              fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
-              fontStyle: 'italic',
+              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 400,
-              color: 'oklch(0.4 0.01 60)',
-              lineHeight: 1.8,
+              fontStyle: 'italic',
+              lineHeight: 1.2,
+              color: 'oklch(0.14 0.005 60)',
             }}
           >
-            {lang === 'en' ? (
-              <>Hello, this is <span style={{ fontWeight: 600 }}>Alen Danilina</span>'s page.</>
-            ) : (
-              <>Привет, это страница <span style={{ fontWeight: 600 }}>Алены Данилиной</span>.</>
-            )}
-          </p>
+            {t('About Me', 'Обо мне')}
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
@@ -52,32 +47,11 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right: Text and philosophy */}
+          {/* Right: Text */}
           <div className="md:pt-8">
-            {/* Main heading */}
-            <h2
-              className="reveal reveal-delay-1 mb-8"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                fontWeight: 400,
-                fontStyle: 'italic',
-                lineHeight: 1.2,
-                color: 'oklch(0.14 0.005 60)',
-              }}
-            >
-              {lang === 'en' ? 'My goal is to capture you,' : 'Моя цель — запечатлеть вас,'}
-              <br />
-              {lang === 'en' ? 'your character, your story,' : 'ваш характер, вашу историю,'}
-              <br />
-              <span style={{ textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '0.3em' }}>
-                {lang === 'en' ? 'your special essence' : 'вашу особенную сущность'}
-              </span>
-            </h2>
-
             {/* Body text */}
             <div
-              className="reveal reveal-delay-2 space-y-6 mb-10"
+              className="reveal reveal-delay-1 space-y-6 mb-10"
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
@@ -89,46 +63,34 @@ export default function AboutSection() {
               {lang === 'en' ? (
                 <>
                   <p>
-                    As long as I can remember, photography has always been in my life. I tried a lot of different types of photography and understood that <span style={{ fontStyle: 'italic' }}>portrait genre was my passion</span> because it is the most honest and frank one.
+                    I'm Alen, a photographer working with portraits, model tests, and brand shoots.
                   </p>
                   <p>
-                    My photographs are candid but elegant and sophisticated. I want to take really stylish, natural and <span style={{ textDecoration: 'underline' }}>timeless photos</span> of you.
+                    My focus is on light, aesthetics, and capturing a natural yet intentional presence in the frame. I usually shoot on film, digital, and Polaroid.
                   </p>
                   <p>
-                    I'm based in Istanbul, working in my own studio space where we can create the right atmosphere and feel at ease.
+                    I'm based in Istanbul and work in my own studio space — a European-style apartment in Cihangir with a French balcony — where we can create the right mood and feel at ease.
+                  </p>
+                  <p>
+                    My goal is to show you as your best self — the way I see you.
                   </p>
                 </>
               ) : (
                 <>
                   <p>
-                    Сколько я себя помню, фотография всегда была в моей жизни. Я пробовала разные виды фотографии и поняла, что <span style={{ fontStyle: 'italic' }}>портретный жанр — моя страсть</span>, потому что это самый честный и откровенный жанр.
+                    Я Ален, фотограф, работающий с портретами, модельными тестами и брендовыми съемками.
                   </p>
                   <p>
-                    Мои фотографии — откровенные, но элегантные и изысканные. Я хочу создавать стильные, естественные и <span style={{ textDecoration: 'underline' }}>вечные фотографии</span> вас.
+                    Мой фокус — свет, эстетика и захват естественного, но намеренного присутствия в кадре. Я обычно снимаю на пленку, цифру и Polaroid.
                   </p>
                   <p>
-                    Я работаю в Стамбуле, в своей студии, где мы можем создать нужную атмосферу и чувствовать себя свободно.
+                    Я работаю в Стамбуле в своей студии — европейской квартире в Джихангире с французским балконом — где мы можем создать нужное настроение и чувствовать себя комфортно.
+                  </p>
+                  <p>
+                    Моя цель — показать вас в лучшем виде — так, как я вас вижу.
                   </p>
                 </>
               )}
-            </div>
-
-            {/* Closing signature */}
-            <div className="reveal reveal-delay-3">
-              <p
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: '1rem',
-                  fontStyle: 'italic',
-                  fontWeight: 400,
-                  color: 'oklch(0.4 0.01 60)',
-                  lineHeight: 1.8,
-                }}
-              >
-                {lang === 'en' ? 'Looking forward to working with you' : 'С нетерпением жду работы с вами'}
-                <br />
-                <span style={{ fontWeight: 600 }}>Alen</span>
-              </p>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@
 import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import PhilosophySection from '@/components/PhilosophySection';
+
 import PortfolioSection from '@/components/PortfolioSection';
 import PricingSection from '@/components/PricingSection';
 import ClientGallerySection from '@/components/ClientGallerySection';
@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutSection />
-        <PhilosophySection />
+
         <PortfolioSection />
         <PricingSection />
         <ClientGallerySection />

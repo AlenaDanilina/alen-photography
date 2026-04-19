@@ -9,7 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 
 const HERO_IMAGE_LEFT = '/manus-storage/305C0932-hq_80d09f15.webp';
-const HERO_IMAGE_RIGHT = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/310519663565548147_3f8e2c2c.webp';
+const HERO_IMAGE_RIGHT = '/manus-storage/IMG_1759(1)_e21380dc.JPG';
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -227,10 +227,24 @@ export default function HeroSection() {
               letterSpacing: '0.08em',
               color: 'rgba(248,246,242,0.7)',
               textTransform: 'uppercase',
+              marginBottom: '2rem',
             }}
           >
             ALEN DANILINA
           </p>
+
+          {/* CTA Button */}
+          <a
+            href="#contact"
+            className="btn-rounded-ghost"
+            style={{
+              opacity: textVisible ? 1 : 0,
+              transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
+              transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
+            }}
+          >
+            {t('Book a shot', 'Записаться')}
+          </a>
         </div>
       </div>
 
