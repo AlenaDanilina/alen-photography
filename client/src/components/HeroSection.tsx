@@ -1,7 +1,7 @@
 /*
  * HERO SECTION — Alen Danilina Portfolio
  * Design: Split layout inspired by Vercel version
- * Desktop: Two images side-by-side with centered text
+ * Desktop: Two images side-by-side with centered text, buttons in corners, social icons
  * Mobile: Single image with text overlay
  */
 
@@ -118,7 +118,6 @@ export default function HeroSection() {
               letterSpacing: '0.1em',
               color: 'rgba(248,246,242,0.7)',
               textTransform: 'uppercase',
-              marginBottom: '3rem',
               opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
               transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.2s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.2s',
@@ -126,30 +125,69 @@ export default function HeroSection() {
           >
             ALEN DANILINA
           </p>
+        </div>
 
-          {/* CTA Buttons */}
-          <div
-            style={{
-              display: 'flex',
-              gap: '1.5rem',
-              opacity: textVisible ? 1 : 0,
-              transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
-              transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
-            }}
+        {/* Left bottom button */}
+        <div
+          className="absolute bottom-12 left-6 z-20"
+          style={{
+            opacity: textVisible ? 1 : 0,
+            transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
+            transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
+          }}
+        >
+          <a href="#portfolio" className="btn-rounded-ghost">
+            {t('Portfolio', 'Портфолио')} →
+          </a>
+        </div>
+
+        {/* Right bottom button */}
+        <div
+          className="absolute bottom-12 right-6 z-20"
+          style={{
+            opacity: textVisible ? 1 : 0,
+            transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
+            transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
+          }}
+        >
+          <a href="#contact" className="btn-rounded-ghost">
+            {t('Get in touch', 'Оставить запрос')} →
+          </a>
+        </div>
+
+        {/* Left side social icons */}
+        <div
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 flex flex-col gap-6"
+          style={{
+            opacity: textVisible ? 1 : 0,
+            transform: textVisible ? 'translateY(-50%)' : 'translateY(calc(-50% + 16px))',
+            transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.4s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.4s',
+          }}
+        >
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-rounded-ghost"
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
           >
-            <a
-              href="#portfolio"
-              className="btn-rounded-ghost"
-            >
-              {t('Portfolio', 'Портфолио')}
-            </a>
-            <a
-              href="#contact"
-              className="btn-rounded-ghost"
-            >
-              {t('Get in touch', 'Оставить запрос')}
-            </a>
-          </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <circle cx="17.5" cy="6.5" r="1.5" />
+            </svg>
+          </a>
+          <a
+            href="https://telegram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-rounded-ghost"
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M21 2L2 13.46l6.82 2.06L17.31 6.7M9 13.46l8.55 7.89" />
+            </svg>
+          </a>
         </div>
 
         {/* Right image */}
@@ -253,7 +291,6 @@ export default function HeroSection() {
               letterSpacing: '0.08em',
               color: 'rgba(248,246,242,0.7)',
               textTransform: 'uppercase',
-              marginBottom: '2rem',
               textAlign: 'left',
               margin: '0.5rem 0 2rem 0',
             }}
@@ -265,29 +302,10 @@ export default function HeroSection() {
           <a
             href="#contact"
             className="btn-rounded-ghost"
-            style={{
-              opacity: textVisible ? 1 : 0,
-              transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
-              transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
-              alignSelf: 'flex-start',
-            }}
           >
-            {t('Book a shot', 'Записаться')}
+            {t('Get in touch', 'Оставить запрос')}
           </a>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 right-8 md:right-16 flex flex-col items-center gap-2 z-20"
-        style={{
-          opacity: textVisible ? 0.5 : 0,
-          transition: 'opacity 1s ease 0.8s',
-        }}
-      >
-        <span className="label-editorial text-white" style={{ fontSize: '0.5625rem' }}>
-          {t('Scroll', 'Листать')}
-        </span>
       </div>
     </section>
   );

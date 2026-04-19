@@ -139,7 +139,7 @@ export default function ClientGallerySection() {
                 href={VIGBO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-editorial-ghost"
+                className="btn-rounded-ghost"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
