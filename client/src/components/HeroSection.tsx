@@ -167,7 +167,7 @@ export default function HeroSection() {
 
         {/* Mobile text overlay */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-end pb-16 px-6"
+          className="absolute inset-0 flex flex-col justify-end pb-12 px-6"
           style={{
             opacity: textVisible ? 1 : 0,
             transform: textVisible ? 'translateY(0)' : 'translateY(32px)',
@@ -179,58 +179,48 @@ export default function HeroSection() {
             style={{
               fontFamily: "'Jost', sans-serif",
               fontWeight: 300,
-              fontSize: '0.65rem',
+              fontSize: '0.55rem',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               color: 'rgba(248,246,242,0.6)',
-              marginBottom: '2rem',
-              textAlign: 'center',
+              marginBottom: '1.5rem',
+              textAlign: 'left',
             }}
           >
             {t('Istanbul / Portraits Fashion Model Tests', 'Стамбул / Портреты Мода Модельные тесты')}
           </p>
 
           {/* Main heading */}
-          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+          <div style={{ textAlign: 'left', marginBottom: '1rem' }}>
             <p
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: '2.5rem',
-                fontWeight: 400,
-                color: 'oklch(0.977 0.005 75)',
-                margin: '0 0 0.25rem 0',
-                lineHeight: 1,
-              }}
-            >
-              PHOTO
-            </p>
-            <p
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: '2.5rem',
+                fontSize: '2rem',
                 fontWeight: 400,
                 fontStyle: 'italic',
                 color: 'oklch(0.977 0.005 75)',
                 margin: 0,
-                lineHeight: 1,
+                lineHeight: 1.1,
               }}
             >
-              ABOUT YOU
+              Alen Danilina
             </p>
           </div>
 
-          {/* Name */}
+          {/* Subtitle */}
           <p
             style={{
               fontFamily: "'Jost', sans-serif",
-              fontSize: '0.75rem',
+              fontWeight: 300,
+              fontSize: '0.7rem',
               letterSpacing: '0.08em',
               color: 'rgba(248,246,242,0.7)',
               textTransform: 'uppercase',
               marginBottom: '2rem',
+              textAlign: 'left',
             }}
           >
-            ALEN DANILINA
+            {t('Photographer', 'Фотограф')}
           </p>
 
           {/* CTA Button */}
@@ -241,6 +231,7 @@ export default function HeroSection() {
               opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
               transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
+              alignSelf: 'flex-start',
             }}
           >
             {t('Book a shot', 'Записаться')}
