@@ -191,36 +191,49 @@ export default function HeroSection() {
           </p>
 
           {/* Main heading */}
-          <div style={{ textAlign: 'left', marginBottom: '1rem' }}>
+          <div style={{ textAlign: 'left', marginBottom: '0.5rem' }}>
             <p
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: '2rem',
+                fontSize: '2.5rem',
+                fontWeight: 400,
+                color: 'oklch(0.977 0.005 75)',
+                margin: 0,
+                lineHeight: 1,
+              }}
+            >
+              PHOTO
+            </p>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: '2.5rem',
                 fontWeight: 400,
                 fontStyle: 'italic',
                 color: 'oklch(0.977 0.005 75)',
                 margin: 0,
-                lineHeight: 1.1,
+                lineHeight: 1,
               }}
             >
-              Alen Danilina
+              ABOUT YOU
             </p>
           </div>
 
-          {/* Subtitle */}
+          {/* Name */}
           <p
             style={{
               fontFamily: "'Jost', sans-serif",
               fontWeight: 300,
-              fontSize: '0.7rem',
+              fontSize: '0.75rem',
               letterSpacing: '0.08em',
               color: 'rgba(248,246,242,0.7)',
               textTransform: 'uppercase',
               marginBottom: '2rem',
               textAlign: 'left',
+              margin: '0.5rem 0 2rem 0',
             }}
           >
-            {t('Photographer', 'Фотограф')}
+            ALEN DANILINA
           </p>
 
           {/* CTA Button */}
