@@ -302,22 +302,6 @@ export default function HeroSection() {
           <a
             href="#contact"
             className="btn-rounded-ghost"
-            style={{
-              display: 'inline-block',
-              padding: '0.75rem 1.5rem',
-              textAlign: 'center',
-              borderRadius: '2rem',
-              border: '1px solid rgba(248,246,242,0.3)',
-              color: 'oklch(0.977 0.005 75)',
-              textDecoration: 'none',
-              fontFamily: "'Jost', sans-serif",
-              fontSize: '0.7rem',
-              fontWeight: 300,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-            }}
           >
             {t('Get in touch', 'Оставить запрос')}
           </a>
