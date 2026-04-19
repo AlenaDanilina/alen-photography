@@ -169,18 +169,24 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-rounded-ghost"
-            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0, fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.05em' }}
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
           >
-            IG
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <circle cx="17.5" cy="6.5" r="1.5" />
+            </svg>
           </a>
           <a
             href="https://telegram.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-rounded-ghost"
-            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0, fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.05em' }}
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
           >
-            TG
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M21 2L2 13.46l6.82 2.06L17.31 6.7M9 13.46l8.55 7.89" />
+            </svg>
           </a>
         </div>
 
@@ -295,7 +301,24 @@ export default function HeroSection() {
           {/* CTA Button */}
           <a
             href="#contact"
-            className="btn-rounded-ghost"
+            className="btn-editorial"
+            style={{
+              display: 'inline-block',
+              width: '100%',
+              padding: '0.875rem 1.5rem',
+              textAlign: 'center',
+              borderRadius: '2rem',
+              border: '1px solid rgba(248,246,242,0.3)',
+              color: 'oklch(0.977 0.005 75)',
+              textDecoration: 'none',
+              fontFamily: "'Jost', sans-serif",
+              fontSize: '0.75rem',
+              fontWeight: 300,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+            }}
           >
             {t('Get in touch', 'Оставить запрос')}
           </a>
