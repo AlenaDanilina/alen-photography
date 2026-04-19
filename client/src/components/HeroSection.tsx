@@ -169,24 +169,18 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-rounded-ghost"
-            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0, fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.05em' }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <circle cx="17.5" cy="6.5" r="1.5" />
-            </svg>
+            IG
           </a>
           <a
             href="https://telegram.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-rounded-ghost"
-            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0 }}
+            style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 0, fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.05em' }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M21 2L2 13.46l6.82 2.06L17.31 6.7M9 13.46l8.55 7.89" />
-            </svg>
+            TG
           </a>
         </div>
 
