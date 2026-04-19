@@ -165,7 +165,7 @@ export default function HeroSection() {
           }}
         >
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/alyondanilin"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-rounded-ghost"
@@ -178,7 +178,7 @@ export default function HeroSection() {
             </svg>
           </a>
           <a
-            href="https://telegram.com"
+            href="https://t.me/alyondanilin"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-rounded-ghost"
@@ -301,18 +301,17 @@ export default function HeroSection() {
           {/* CTA Button */}
           <a
             href="#contact"
-            className="btn-editorial"
+            className="btn-rounded-ghost"
             style={{
               display: 'inline-block',
-              width: '100%',
-              padding: '0.875rem 1.5rem',
+              padding: '0.75rem 1.5rem',
               textAlign: 'center',
               borderRadius: '2rem',
               border: '1px solid rgba(248,246,242,0.3)',
               color: 'oklch(0.977 0.005 75)',
               textDecoration: 'none',
               fontFamily: "'Jost', sans-serif",
-              fontSize: '0.75rem',
+              fontSize: '0.7rem',
               fontWeight: 300,
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
