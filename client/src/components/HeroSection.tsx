@@ -62,10 +62,10 @@ export default function HeroSection() {
             style={{
               fontFamily: "'Jost', sans-serif",
               fontWeight: 300,
-              fontSize: '0.75rem',
+              fontSize: '0.875rem',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              color: 'rgba(248,246,242,0.6)',
+              color: 'rgba(248,246,242,1)',
               marginBottom: '3rem',
               transitionDelay: '0s',
             }}
@@ -118,6 +118,7 @@ export default function HeroSection() {
               letterSpacing: '0.1em',
               color: 'rgba(248,246,242,0.7)',
               textTransform: 'uppercase',
+              marginBottom: '3rem',
               opacity: textVisible ? 1 : 0,
               transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
               transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.2s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.2s',
@@ -125,6 +126,30 @@ export default function HeroSection() {
           >
             ALEN DANILINA
           </p>
+
+          {/* CTA Buttons */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '1.5rem',
+              opacity: textVisible ? 1 : 0,
+              transform: textVisible ? 'translateY(0)' : 'translateY(16px)',
+              transition: 'opacity 1s cubic-bezier(0.16,1,0.3,1) 0.3s, transform 1s cubic-bezier(0.16,1,0.3,1) 0.3s',
+            }}
+          >
+            <a
+              href="#portfolio"
+              className="btn-rounded-ghost"
+            >
+              {t('Portfolio', 'Портфолио')}
+            </a>
+            <a
+              href="#contact"
+              className="btn-rounded-ghost"
+            >
+              {t('Get in touch', 'Оставить запрос')}
+            </a>
+          </div>
         </div>
 
         {/* Right image */}
@@ -179,7 +204,7 @@ export default function HeroSection() {
             style={{
               fontFamily: "'Jost', sans-serif",
               fontWeight: 300,
-              fontSize: '0.55rem',
+              fontSize: '0.7rem',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               color: 'rgba(248,246,242,0.6)',
