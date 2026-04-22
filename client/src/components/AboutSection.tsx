@@ -63,16 +63,13 @@ export default function AboutSection() {
               {lang === 'en' ? (
                 <>
                   <p>
-                    I'm Alen, a photographer working with portraits, model tests, and brand shoots.
+                    My name is Alena, and I'm a photographer. For me, photography has always been about more than simply creating a beautiful image. What matters to me is not only how a person looks, but also their mood, energy, gaze, presence, and the way all of it comes together within a single frame.
                   </p>
                   <p>
-                    My focus is on light, aesthetics, and capturing a natural yet intentional presence in the frame. I usually shoot on film, digital, and Polaroid.
+                    I live in Istanbul, and this city has deeply influenced the way I see. It has taught me to notice light, textures, atmosphere, and the quiet beauty of subtle moments. I'm drawn to natural softness, understated elegance, and images that feel open, intimate, and alive.
                   </p>
                   <p>
-                    I'm based in Istanbul and work in my own studio space — a European-style apartment in Cihangir with a French balcony — where we can create the right mood and feel at ease.
-                  </p>
-                  <p>
-                    My goal is to show you as your best self — the way I see you.
+                    For me, photography is a way of preserving a feeling that cannot be recreated. I want a photoshoot to feel less like a performance for the camera and more like an experience where you can see yourself as beautiful, alive, and close to yourself.
                   </p>
                 </>
               ) : (
