@@ -8,7 +8,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
-const PORTRAIT_STUDIO_IMAGE = '/manus-storage/0000267_20a8d486.webp';
+const PORTRAIT_STUDIO_IMAGE = '/manus-storage/305C04211_9c25378c.webp';
 const PHOTO_WALK_IMAGE = '/manus-storage/14_56f877b3.webp';
 const MODEL_TEST_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/pricing-model-test-gj4KwJYfTFjYCopVWpb3Bq.webp';
 
