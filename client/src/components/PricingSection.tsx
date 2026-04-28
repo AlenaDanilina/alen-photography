@@ -278,9 +278,10 @@ export default function PricingSection() {
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
-                fontSize: '0.8125rem',
+                fontSize: '0.9375rem',
                 color: 'oklch(0.65 0.015 60)',
                 letterSpacing: '0.02em',
+                lineHeight: 1.6,
               }}
             >
               {t('50€ deposit to confirm your booking.', 'Предоплата 50€ для подтверждения записи.')}
@@ -292,9 +293,10 @@ export default function PricingSection() {
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
-                fontSize: '0.8125rem',
+                fontSize: '0.9375rem',
                 color: 'oklch(0.65 0.015 60)',
                 letterSpacing: '0.02em',
+                lineHeight: 1.6,
               }}
             >
               {t('Model tests and brand collaborations — custom rates. Get in touch to discuss your project.', 'Для модельных тестов и брендовых съёмок — цена обговаривается индивидуально. Напишите, чтобы обсудить детали')}
