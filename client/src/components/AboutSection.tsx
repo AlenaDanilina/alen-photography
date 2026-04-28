@@ -66,7 +66,7 @@ export default function AboutSection() {
                     I'm Alen — a photographer based in Istanbul, working across portraits, fashion, and model tests.
                   </p>
                   <p>
-                    I shoot on film, digital, and Polaroid, and I'm drawn to light, aesthetics, and natural presence in the frame. I work from my own space in Istanbul — a European-style apartment in Cihangir with a view of the Bosphorus and a French balcony — where we can create the right mood and you can feel free.
+                    I shoot on film, digital, and Polaroid, and I'm drawn to light, aesthetics, and natural presence in the frame. I work from my own space in Istanbul — a European-style apartment in Cihangir with a view of the Bosphorus and a French balcony — where we can create the right mood and you can feel at ease.
                   </p>
                   <p>
                     I guide you through the entire process — from styling and outfit selection to posing down to every detail. My goal is to show you at your best — the way I see <strong>you</strong>.
@@ -81,7 +81,7 @@ export default function AboutSection() {
                     Для меня важны свет, эстетика и естественное присутствие человека в кадре. Я снимаю на плёнку, цифровую камеру и Полароид.
                   </p>
                   <p>
-                    Я работаю в своём пространстве в Стамбуле — европейской квартире в Джихангире с видом на Босфор и французским балконом — где можно создать нужную атмосферу и почувствовать себя свободно.
+                    Я работаю в своём пространстве в Стамбуле — европейской квартире в Джихангире с видом на Босфор и французским балконом, где можно создать нужную атмосферу и почувствовать себя свободно.
                   </p>
                   <p>
                     Моя цель — показать вас вашей лучшей версией, не меняя идентичности — подчеркнуть вашу красоту и помочь вам раскрыться.
