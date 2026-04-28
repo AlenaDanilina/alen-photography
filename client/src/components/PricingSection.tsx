@@ -171,7 +171,7 @@ export default function PricingSection() {
                       marginTop: '0.5rem',
                     }}
                   />
-                  Limited to 1.5 hours — no studio, outdoor locations only
+                  Limited to 1.5 hours — no studio, outdoor locations or your location
                 </li>
                 <li
                   className="flex items-start gap-4"
