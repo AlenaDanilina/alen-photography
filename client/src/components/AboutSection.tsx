@@ -63,13 +63,13 @@ export default function AboutSection() {
               {lang === 'en' ? (
                 <>
                   <p>
-                    I'm Alena — a photographer based in Istanbul, working with portraits, fashion, and model tests.
+                    I'm Alen — a photographer based in Istanbul, working with portraits, fashion, and model tests.
                   </p>
                   <p>
                     I shoot on film, digital, and Polaroid, and I'm drawn to light, aesthetics, and natural presence in the frame. I work from my own space — a European-style apartment in Cihangir with a French balcony — where we can create the right mood and you can feel at ease.
                   </p>
                   <p>
-                    I guide you through the entire process — from styling and outfit selection to posing down to every detail. My goal is to show you as your best self, the way I see you.
+                    I guide you through the entire process — from styling and outfit selection to posing down to every detail. My goal is to show you as your best self, the way I see <strong>you</strong>.
                   </p>
                 </>
               ) : (
@@ -78,13 +78,13 @@ export default function AboutSection() {
                     Я — Алёна, фотограф, работающий с портретами, модельными тестами и съёмками для брендов.
                   </p>
                   <p>
-                    Для меня важны свет, эстетика и естественное присутствие человека в кадре. Я снимаю на плёнку, цифровую камеру и Полароид.
+                    Для меня важны свет, эстетика и естественное присутствие человека в кадре. В основном я снимаю на плёнку, а также использую цифровую камеру и Полароид.
                   </p>
                   <p>
                     Я работаю в Стамбуле, в своём пространстве — европейской квартире в Джихангире с французским балконом — где можно создать нужную атмосферу и чувствовать себя свободно.
                   </p>
                   <p>
-                    Я проведу вас через весь процесс — от подбора образа и одежды до точного направления в позировании.
+                    Моя цель — показать вас вашей лучшей версией, не меняя идентичности — подчеркнуть вашу красоту и помочь вам раскрыться.
                   </p>
                 </>
               )}
