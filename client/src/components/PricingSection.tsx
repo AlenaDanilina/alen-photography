@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
 const PORTRAIT_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0540-1_1ba1dd9b.webp';
-const PHOTO_WALK_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/9_081db25a.webp';
+const PHOTO_WALK_IMAGE = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663565548147/kvdlEYuHhUUXUHxf.webp';
 
 const featuresEN = [
   'Film + digital',
