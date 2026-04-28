@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
 const PORTRAIT_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0540-1_1ba1dd9b.webp';
-const PHOTO_WALK_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/9_412a0f62.webp';
+const PHOTO_WALK_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/9_081db25a.webp';
 
 const featuresEN = [
   'Film + digital',
@@ -306,7 +306,7 @@ export default function PricingSection() {
         </div>
 
         {/* Desktop: 2-column (images left stacked, content right) */}
-        <div className="hidden md:grid grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="hidden md:grid grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: Stacked Images */}
           <div className="flex flex-col gap-8">
