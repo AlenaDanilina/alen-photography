@@ -63,13 +63,13 @@ export default function AboutSection() {
               {lang === 'en' ? (
                 <>
                   <p>
-                    I'm Alen — a photographer based in Istanbul, working with portraits, fashion, and model tests.
+                    I'm Alen — a photographer based in Istanbul, working across portraits, fashion, and model tests.
                   </p>
                   <p>
                     I shoot on film, digital, and Polaroid, and I'm drawn to light, aesthetics, and natural presence in the frame. I work from my own space — a European-style apartment in Cihangir with a French balcony — where we can create the right mood and you can feel at ease.
                   </p>
                   <p>
-                    I guide you through the entire process — from styling and outfit selection to posing down to every detail. My goal is to show you as your best self, the way I see <strong>you</strong>.
+                    I guide you through the entire process — from styling and outfit selection to posing down to every detail. My goal is to show you at your best — the way I see <strong>you</strong>.
                   </p>
                 </>
               ) : (
