@@ -118,9 +118,12 @@ export default function PricingSection() {
                 </ul>
 
                 {/* CTA */}
-                <button className="btn-rounded-ghost w-full mt-auto">
+                <a 
+                  href="#contact"
+                  className="btn-rounded-ghost w-full mt-auto inline-block text-center bg-black text-white hover:bg-gray-800 transition-colors duration-300 py-3 px-6 rounded-full font-medium"
+                >
                   {lang === 'en' ? 'Get in Touch' : 'Написать'}
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -160,9 +163,12 @@ export default function PricingSection() {
                 </ul>
 
                 {/* CTA */}
-                <button className="btn-rounded-ghost w-full mt-auto">
+                <a 
+                  href="#contact"
+                  className="btn-rounded-ghost w-full mt-auto inline-block text-center bg-black text-white hover:bg-gray-800 transition-colors duration-300 py-3 px-6 rounded-full font-medium"
+                >
                   {lang === 'en' ? 'Get in Touch' : 'Написать'}
-                </button>
+                </a>
               </div>
             </div>
           </div>
