@@ -127,62 +127,98 @@ export default function PricingSection() {
             </div>
 
             {/* Photo walk option */}
-            <div className="reveal reveal-delay-3 pt-8 border-t" style={{ borderColor: 'oklch(0.87 0.01 75)' }}>
-              <h3
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: '1.5rem',
-                  fontWeight: 400,
-                  fontStyle: 'italic',
-                  color: 'oklch(0.14 0.005 60)',
-                  marginBottom: '0.5rem',
-                }}
-              >
-                {t('Photo walk', 'Фотопрогулка')}
-              </h3>
-              <div
-                style={{
-                  fontSize: '2rem',
-                  fontWeight: 300,
-                  color: 'oklch(0.14 0.005 60)',
-                  marginBottom: '1rem',
-                  letterSpacing: '-0.02em',
-                }}
-              >
-                270€
+            <div className="reveal reveal-delay-3 pt-12 border-t" style={{ borderColor: 'oklch(0.87 0.01 75)' }}>
+              <div className="mb-10">
+                <h2
+                  className="heading-display mb-3"
+                  style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontStyle: 'italic' }}
+                >
+                  {t('Photo walk', 'Фотопрогулка')}
+                </h2>
+                <div
+                  className="heading-display"
+                  style={{
+                    fontSize: 'clamp(3.5rem, 7vw, 5.5rem)',
+                    fontWeight: 300,
+                    color: 'oklch(0.14 0.005 60)',
+                    lineHeight: 1,
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  270€
+                </div>
               </div>
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-4 mb-8">
                 <li
+                  className="flex items-start gap-4"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
                     fontSize: '0.9375rem',
                     lineHeight: 1.6,
                     color: 'oklch(0.4 0.01 60)',
+                    borderBottom: '1px solid oklch(0.87 0.01 75)',
+                    paddingBottom: '1rem',
                   }}
                 >
-                  <span style={{ color: 'oklch(0.72 0.04 60)', fontWeight: 500 }}>Limited to 1.5 hours</span> — no studio, outdoor locations only
+                  <span
+                    className="mt-1 flex-shrink-0"
+                    style={{
+                      width: '4px',
+                      height: '4px',
+                      borderRadius: '50%',
+                      background: 'oklch(0.72 0.04 60)',
+                      marginTop: '0.5rem',
+                    }}
+                  />
+                  Limited to 1.5 hours — no studio, outdoor locations only
                 </li>
                 <li
+                  className="flex items-start gap-4"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
                     fontSize: '0.9375rem',
                     lineHeight: 1.6,
                     color: 'oklch(0.4 0.01 60)',
+                    borderBottom: '1px solid oklch(0.87 0.01 75)',
+                    paddingBottom: '1rem',
                   }}
                 >
-                  <span style={{ color: 'oklch(0.72 0.04 60)', fontWeight: 500 }}>Digital camera priority</span> — film not included
+                  <span
+                    className="mt-1 flex-shrink-0"
+                    style={{
+                      width: '4px',
+                      height: '4px',
+                      borderRadius: '50%',
+                      background: 'oklch(0.72 0.04 60)',
+                      marginTop: '0.5rem',
+                    }}
+                  />
+                  Digital camera priority — film not included
                 </li>
                 <li
+                  className="flex items-start gap-4"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
                     fontSize: '0.9375rem',
                     lineHeight: 1.6,
                     color: 'oklch(0.4 0.01 60)',
+                    borderBottom: '1px solid oklch(0.87 0.01 75)',
+                    paddingBottom: '1rem',
                   }}
                 >
+                  <span
+                    className="mt-1 flex-shrink-0"
+                    style={{
+                      width: '4px',
+                      height: '4px',
+                      borderRadius: '50%',
+                      background: 'oklch(0.72 0.04 60)',
+                      marginTop: '0.5rem',
+                    }}
+                  />
                   20–25 selected images with light retouch
                 </li>
               </ul>
