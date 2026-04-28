@@ -23,6 +23,7 @@ const featuresPortraitEN = [
 ];
 
 const featuresPhotoWalkEN = [
+  'Film + digital (digital priority)',
   'Limited to 1.5 hours — no studio, outdoor locations or your location',
   '30–40 selected images',
   'Guidance with posing & styling',
@@ -41,6 +42,7 @@ const featuresPortraitRU = [
 ];
 
 const featuresPhotoWalkRU = [
+  'Плёнка + digital (приоритет digital)',
   'Максимум 1.5 часа — без студии, уличные локации или ваша локация',
   '30–40 отобранных кадров',
   'Помощь с позированием и образами',
