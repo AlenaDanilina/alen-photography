@@ -63,13 +63,13 @@ export default function AboutSection() {
               {lang === 'en' ? (
                 <>
                   <p>
-                    My name is Alena, and I'm a photographer. For me, photography has always been about more than simply creating a beautiful image. What matters to me is not only how a person looks, but also their mood, energy, gaze, presence, and the way all of it comes together within a single frame.
+                    I'm Alena — a photographer based in Istanbul, working with portraits, fashion, and model tests.
                   </p>
                   <p>
-                    I live in Istanbul, and this city has deeply influenced the way I see. It has taught me to notice light, textures, atmosphere, and the quiet beauty of subtle moments. I'm drawn to natural softness, understated elegance, and images that feel open, intimate, and alive.
+                    I shoot on film, digital, and Polaroid, and I'm drawn to light, aesthetics, and natural presence in the frame. I work from my own space — a European-style apartment in Cihangir with a French balcony — where we can create the right mood and you can feel at ease.
                   </p>
                   <p>
-                    For me, photography is a way of preserving a feeling that cannot be recreated. I want a photoshoot to feel less like a performance for the camera and more like an experience where you can see yourself as beautiful, alive, and close to yourself.
+                    I guide you through the entire process — from styling and outfit selection to posing down to every detail. My goal is to show you as your best self, the way I see you.
                   </p>
                 </>
               ) : (
@@ -78,13 +78,13 @@ export default function AboutSection() {
                     Я — Алёна, фотограф, работающий с портретами, модельными тестами и съёмками для брендов.
                   </p>
                   <p>
-                    Для меня важны свет, эстетика и естественное ощущение человека в кадре. Я снимаю на плёнку, цифровую камеру и Полароид.
+                    Для меня важны свет, эстетика и естественное присутствие человека в кадре. Я снимаю на плёнку, цифровую камеру и Полароид.
                   </p>
                   <p>
                     Я работаю в Стамбуле, в своём пространстве — европейской квартире в Джихангире с французским балконом — где можно создать нужную атмосферу и чувствовать себя свободно.
                   </p>
                   <p>
-                    Моя цель — показать вас так, как я вас вижу, вашей лучшей версией себя.
+                    Я проведу вас через весь процесс — от подбора образа и одежды до точного направления в позировании.
                   </p>
                 </>
               )}
