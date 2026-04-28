@@ -1,6 +1,6 @@
 /*
  * PRICING SECTION — Alen Danilina Portfolio
- * Design: 3-column on desktop (image-content-image), 2-column on mobile (image-content)
+ * Design: Mobile 2-col (image-content), Desktop 2-col (images-content with stacked images left)
  * Light background → dark text
  */
 
@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
 const PORTRAIT_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0540-1_1ba1dd9b.webp';
-const PHOTO_WALK_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/9_ba665827.webp';
+const PHOTO_WALK_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/9_412a0f62.webp';
 
 const featuresEN = [
   'Film + digital',
@@ -305,21 +305,35 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* Desktop: 3-column (image-content-image) */}
-        <div className="hidden md:grid grid-cols-3 gap-8 lg:gap-12 items-start">
+        {/* Desktop: 2-column (images left stacked, content right) */}
+        <div className="hidden md:grid grid-cols-2 gap-12 lg:gap-16 items-start">
 
-          {/* Left Image - Portrait Shooting */}
-          <div className="reveal">
-            <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '55vh' }}>
-              <img
-                src={PORTRAIT_IMAGE}
-                alt="Studio shoot — Istanbul balcony"
-                loading="lazy"
-              />
+          {/* Left: Stacked Images */}
+          <div className="flex flex-col gap-8">
+            {/* Portrait Image */}
+            <div className="reveal">
+              <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '50vh' }}>
+                <img
+                  src={PORTRAIT_IMAGE}
+                  alt="Studio shoot — Istanbul balcony"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Photo Walk Image */}
+            <div className="reveal reveal-delay-1">
+              <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '50vh' }}>
+                <img
+                  src={PHOTO_WALK_IMAGE}
+                  alt="Fashion photo walk — Istanbul"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Center Content */}
+          {/* Right: Content */}
           <div>
             {/* Portrait Shooting */}
             <div className="reveal reveal-delay-1 mb-10">
@@ -556,17 +570,6 @@ export default function PricingSection() {
             >
               {t('Model tests and brand collaborations — custom rates. Get in touch to discuss your project.', 'Для модельных тестов и брендовых съёмок — цена обговаривается индивидуально. Напишите, чтобы обсудить детали')}
             </p>
-          </div>
-
-          {/* Right Image - Photo walk */}
-          <div className="reveal">
-            <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '55vh' }}>
-              <img
-                src={PHOTO_WALK_IMAGE}
-                alt="Fashion photo walk — Istanbul"
-                loading="lazy"
-              />
-            </div>
           </div>
 
         </div>
