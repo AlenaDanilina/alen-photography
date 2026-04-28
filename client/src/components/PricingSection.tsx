@@ -1,13 +1,14 @@
 /*
  * PRICING SECTION — Alen Danilina Portfolio
- * Design: Centered single card, generous padding, warm off-white background
+ * Design: 3-column layout with images on sides, pricing content in center
  * Light background → dark text
  */
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useReveal } from '@/hooks/useReveal';
 
-const PRICING_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0540-1_1ba1dd9b.webp';
+const PORTRAIT_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/305C0540-1_1ba1dd9b.webp';
+const PHOTO_WALK_IMAGE = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663565548147/GHTrY7qThXL6554NwimgBs/9_ba665827.webp';
 
 const featuresEN = [
   'Film + digital',
@@ -43,41 +44,41 @@ export default function PricingSection() {
     >
 
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        {/* Label */}
+        <div className="reveal flex items-center gap-4 mb-12">
+          <span className="deco-line" />
+          <span className="label-editorial" style={{ color: 'oklch(0.72 0.04 60)' }}>
+            {t('Packages', 'Пакеты')}
+          </span>
+        </div>
 
-          {/* Image */}
-          <div className="reveal order-2 lg:order-1">
-            <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '65vh' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
+
+          {/* Left Image - Portrait Shooting */}
+          <div className="reveal order-2 md:order-1 hidden md:block">
+            <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '55vh' }}>
               <img
-                src={PRICING_IMAGE}
+                src={PORTRAIT_IMAGE}
                 alt="Studio shoot — Istanbul balcony"
                 loading="lazy"
               />
             </div>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2">
-            {/* Label */}
-            <div className="reveal flex items-center gap-4 mb-8">
-              <span className="deco-line" />
-              <span className="label-editorial" style={{ color: 'oklch(0.72 0.04 60)' }}>
-                {t('Packages', 'Пакеты')}
-              </span>
-            </div>
-
-            {/* Title + price */}
-            <div className="reveal reveal-delay-1 mb-10">
+          {/* Center Content */}
+          <div className="order-1 md:order-2">
+            {/* Portrait Shooting */}
+            <div className="reveal reveal-delay-1 mb-12">
               <h2
                 className="heading-display mb-3"
-                style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontStyle: 'italic' }}
+                style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontStyle: 'italic' }}
               >
                 {t('Portrait shooting', 'Портретная съёмка')}
               </h2>
               <div
                 className="heading-display"
                 style={{
-                  fontSize: 'clamp(3.5rem, 7vw, 5.5rem)',
+                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                   fontWeight: 300,
                   color: 'oklch(0.14 0.005 60)',
                   lineHeight: 1,
@@ -89,29 +90,29 @@ export default function PricingSection() {
             </div>
 
             {/* Features list */}
-            <ul className="reveal reveal-delay-2 space-y-4 mb-12">
+            <ul className="reveal reveal-delay-2 space-y-3 mb-10">
               {features.map((feature, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-3"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.6,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
                     color: 'oklch(0.4 0.01 60)',
                     borderBottom: '1px solid oklch(0.87 0.01 75)',
-                    paddingBottom: '1rem',
+                    paddingBottom: '0.75rem',
                   }}
                 >
                   <span
                     className="mt-1 flex-shrink-0"
                     style={{
-                      width: '4px',
-                      height: '4px',
+                      width: '3px',
+                      height: '3px',
                       borderRadius: '50%',
                       background: 'oklch(0.72 0.04 60)',
-                      marginTop: '0.5rem',
+                      marginTop: '0.35rem',
                     }}
                   />
                   {feature}
@@ -120,25 +121,25 @@ export default function PricingSection() {
             </ul>
 
             {/* CTA */}
-            <div className="reveal reveal-delay-3 mb-12">
+            <div className="reveal reveal-delay-3 mb-10">
               <a href="#contact" className="btn-rounded-ghost">
                 {t('Book a shoot', 'Записать')}
               </a>
             </div>
 
             {/* Photo walk option */}
-            <div className="reveal reveal-delay-3 pt-12 border-t" style={{ borderColor: 'oklch(0.87 0.01 75)' }}>
-              <div className="mb-10">
+            <div className="reveal reveal-delay-3 pt-10 border-t" style={{ borderColor: 'oklch(0.87 0.01 75)' }}>
+              <div className="mb-8">
                 <h2
-                  className="heading-display mb-3"
-                  style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontStyle: 'italic' }}
+                  className="heading-display mb-2"
+                  style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', fontStyle: 'italic' }}
                 >
                   {t('Photo walk', 'Фотопрогулка')}
                 </h2>
                 <div
                   className="heading-display"
                   style={{
-                    fontSize: 'clamp(3.5rem, 7vw, 5.5rem)',
+                    fontSize: 'clamp(2rem, 4vw, 3rem)',
                     fontWeight: 300,
                     color: 'oklch(0.14 0.005 60)',
                     lineHeight: 1,
@@ -148,123 +149,123 @@ export default function PricingSection() {
                   270€
                 </div>
               </div>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6">
                 <li
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-3"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.6,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
                     color: 'oklch(0.4 0.01 60)',
                     borderBottom: '1px solid oklch(0.87 0.01 75)',
-                    paddingBottom: '1rem',
+                    paddingBottom: '0.75rem',
                   }}
                 >
                   <span
                     className="mt-1 flex-shrink-0"
                     style={{
-                      width: '4px',
-                      height: '4px',
+                      width: '3px',
+                      height: '3px',
                       borderRadius: '50%',
                       background: 'oklch(0.72 0.04 60)',
-                      marginTop: '0.5rem',
+                      marginTop: '0.35rem',
                     }}
                   />
                   Limited to 1.5 hours — no studio, outdoor locations or your location
                 </li>
                 <li
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-3"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.6,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
                     color: 'oklch(0.4 0.01 60)',
                     borderBottom: '1px solid oklch(0.87 0.01 75)',
-                    paddingBottom: '1rem',
+                    paddingBottom: '0.75rem',
                   }}
                 >
                   <span
                     className="mt-1 flex-shrink-0"
                     style={{
-                      width: '4px',
-                      height: '4px',
+                      width: '3px',
+                      height: '3px',
                       borderRadius: '50%',
                       background: 'oklch(0.72 0.04 60)',
-                      marginTop: '0.5rem',
+                      marginTop: '0.35rem',
                     }}
                   />
                   30–40 selected images
                 </li>
                 <li
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-3"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.6,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
                     color: 'oklch(0.4 0.01 60)',
                     borderBottom: '1px solid oklch(0.87 0.01 75)',
-                    paddingBottom: '1rem',
+                    paddingBottom: '0.75rem',
                   }}
                 >
                   <span
                     className="mt-1 flex-shrink-0"
                     style={{
-                      width: '4px',
-                      height: '4px',
+                      width: '3px',
+                      height: '3px',
                       borderRadius: '50%',
                       background: 'oklch(0.72 0.04 60)',
-                      marginTop: '0.5rem',
+                      marginTop: '0.35rem',
                     }}
                   />
                   Guidance with posing & styling
                 </li>
                 <li
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-3"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.6,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
                     color: 'oklch(0.4 0.01 60)',
                     borderBottom: '1px solid oklch(0.87 0.01 75)',
-                    paddingBottom: '1rem',
+                    paddingBottom: '0.75rem',
                   }}
                 >
                   <span
                     className="mt-1 flex-shrink-0"
                     style={{
-                      width: '4px',
-                      height: '4px',
+                      width: '3px',
+                      height: '3px',
                       borderRadius: '50%',
                       background: 'oklch(0.72 0.04 60)',
-                      marginTop: '0.5rem',
+                      marginTop: '0.35rem',
                     }}
                   />
                   Outfit curation
                 </li>
                 <li
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-3"
                   style={{
                     fontFamily: "'Jost', sans-serif",
                     fontWeight: 300,
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.6,
+                    fontSize: '0.875rem',
+                    lineHeight: 1.5,
                     color: 'oklch(0.4 0.01 60)',
                     borderBottom: '1px solid oklch(0.87 0.01 75)',
-                    paddingBottom: '1rem',
+                    paddingBottom: '0.75rem',
                   }}
                 >
                   <span
                     className="mt-1 flex-shrink-0"
                     style={{
-                      width: '4px',
-                      height: '4px',
+                      width: '3px',
+                      height: '3px',
                       borderRadius: '50%',
                       background: 'oklch(0.72 0.04 60)',
-                      marginTop: '0.5rem',
+                      marginTop: '0.35rem',
                     }}
                   />
                   Light retouch
@@ -274,11 +275,11 @@ export default function PricingSection() {
 
             {/* Deposit note */}
             <p
-              className="reveal reveal-delay-4 mt-8"
+              className="reveal reveal-delay-4 mt-8 text-sm"
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
-                fontSize: '0.9375rem',
+                fontSize: '0.875rem',
                 color: 'oklch(0.65 0.015 60)',
                 letterSpacing: '0.02em',
                 lineHeight: 1.6,
@@ -289,11 +290,11 @@ export default function PricingSection() {
 
             {/* Custom pricing note */}
             <p
-              className="reveal reveal-delay-4 mt-4"
+              className="reveal reveal-delay-4 mt-3 text-sm"
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
-                fontSize: '0.9375rem',
+                fontSize: '0.875rem',
                 color: 'oklch(0.65 0.015 60)',
                 letterSpacing: '0.02em',
                 lineHeight: 1.6,
@@ -302,6 +303,18 @@ export default function PricingSection() {
               {t('Model tests and brand collaborations — custom rates. Get in touch to discuss your project.', 'Для модельных тестов и брендовых съёмок — цена обговаривается индивидуально. Напишите, чтобы обсудить детали')}
             </p>
           </div>
+
+          {/* Right Image - Photo walk */}
+          <div className="reveal order-3 md:order-3 hidden md:block">
+            <div className="portfolio-item" style={{ aspectRatio: '3/4', maxHeight: '55vh' }}>
+              <img
+                src={PHOTO_WALK_IMAGE}
+                alt="Fashion photo walk — Istanbul"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
