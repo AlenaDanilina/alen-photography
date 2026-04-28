@@ -62,7 +62,7 @@ export default function PricingSection() {
             <div className="reveal flex items-center gap-4 mb-8">
               <span className="deco-line" />
               <span className="label-editorial" style={{ color: 'oklch(0.72 0.04 60)' }}>
-                {t('Pricing', 'Стоимость')}
+                {t('Packages', 'Пакеты')}
               </span>
             </div>
 
@@ -195,7 +195,7 @@ export default function PricingSection() {
                       marginTop: '0.5rem',
                     }}
                   />
-                  Digital camera priority — film not included
+                  30–40 selected images
                 </li>
                 <li
                   className="flex items-start gap-4"
@@ -219,7 +219,55 @@ export default function PricingSection() {
                       marginTop: '0.5rem',
                     }}
                   />
-                  20–25 selected images with light retouch
+                  Guidance with posing & styling
+                </li>
+                <li
+                  className="flex items-start gap-4"
+                  style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.6,
+                    color: 'oklch(0.4 0.01 60)',
+                    borderBottom: '1px solid oklch(0.87 0.01 75)',
+                    paddingBottom: '1rem',
+                  }}
+                >
+                  <span
+                    className="mt-1 flex-shrink-0"
+                    style={{
+                      width: '4px',
+                      height: '4px',
+                      borderRadius: '50%',
+                      background: 'oklch(0.72 0.04 60)',
+                      marginTop: '0.5rem',
+                    }}
+                  />
+                  Outfit curation
+                </li>
+                <li
+                  className="flex items-start gap-4"
+                  style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.6,
+                    color: 'oklch(0.4 0.01 60)',
+                    borderBottom: '1px solid oklch(0.87 0.01 75)',
+                    paddingBottom: '1rem',
+                  }}
+                >
+                  <span
+                    className="mt-1 flex-shrink-0"
+                    style={{
+                      width: '4px',
+                      height: '4px',
+                      borderRadius: '50%',
+                      background: 'oklch(0.72 0.04 60)',
+                      marginTop: '0.5rem',
+                    }}
+                  />
+                  Light retouch
                 </li>
               </ul>
             </div>
