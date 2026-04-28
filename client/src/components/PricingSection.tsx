@@ -120,15 +120,77 @@ export default function PricingSection() {
             </ul>
 
             {/* CTA */}
-            <div className="reveal reveal-delay-3">
+            <div className="reveal reveal-delay-3 mb-12">
               <a href="#contact" className="btn-rounded-ghost">
-                {t('Book a shoot', 'Записаться')}
+                {t('Book a shoot', 'Записать')}
               </a>
+            </div>
+
+            {/* Photo walk option */}
+            <div className="reveal reveal-delay-3 pt-8 border-t" style={{ borderColor: 'oklch(0.87 0.01 75)' }}>
+              <h3
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: '1.5rem',
+                  fontWeight: 400,
+                  fontStyle: 'italic',
+                  color: 'oklch(0.14 0.005 60)',
+                  marginBottom: '0.5rem',
+                }}
+              >
+                {t('Photo walk', 'Фотопрогулка')}
+              </h3>
+              <div
+                style={{
+                  fontSize: '2rem',
+                  fontWeight: 300,
+                  color: 'oklch(0.14 0.005 60)',
+                  marginBottom: '1rem',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                270€
+              </div>
+              <ul className="space-y-3 mb-6">
+                <li
+                  style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.6,
+                    color: 'oklch(0.4 0.01 60)',
+                  }}
+                >
+                  <span style={{ color: 'oklch(0.72 0.04 60)', fontWeight: 500 }}>Limited to 1.5 hours</span> — no studio, outdoor locations only
+                </li>
+                <li
+                  style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.6,
+                    color: 'oklch(0.4 0.01 60)',
+                  }}
+                >
+                  <span style={{ color: 'oklch(0.72 0.04 60)', fontWeight: 500 }}>Digital camera priority</span> — film not included
+                </li>
+                <li
+                  style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '0.9375rem',
+                    lineHeight: 1.6,
+                    color: 'oklch(0.4 0.01 60)',
+                  }}
+                >
+                  20–25 selected images with light retouch
+                </li>
+              </ul>
             </div>
 
             {/* Deposit note */}
             <p
-              className="reveal reveal-delay-4 mt-6"
+              className="reveal reveal-delay-4 mt-8"
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontWeight: 300,
