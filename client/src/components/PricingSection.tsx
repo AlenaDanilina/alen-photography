@@ -76,10 +76,10 @@ export default function PricingSection() {
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 md:auto-rows-fr">
           {/* Portrait Shooting Card */}
-          <div className="reveal group">
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="reveal group h-full">
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
               {/* Image */}
               <div className="relative overflow-hidden h-96 md:h-[500px]">
                 <img
@@ -91,7 +91,7 @@ export default function PricingSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 md:p-10">
+              <div className="p-8 md:p-10 flex-1 flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-3xl md:text-4xl font-serif font-light mb-2">
                     {lang === 'en' ? 'Portrait Shooting' : 'Портретная съёмка'}
@@ -112,7 +112,7 @@ export default function PricingSection() {
                 </ul>
 
                 {/* CTA */}
-                <button className="btn-rounded-ghost w-full">
+                <button className="btn-rounded-ghost w-full mt-auto">
                   {lang === 'en' ? 'Get in Touch' : 'Написать'}
                 </button>
               </div>
@@ -120,8 +120,8 @@ export default function PricingSection() {
           </div>
 
           {/* Photo Walk Card */}
-          <div className="reveal group">
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div className="reveal group h-full">
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
               {/* Image */}
               <div className="relative overflow-hidden h-96 md:h-[500px]">
                 <img
@@ -133,7 +133,7 @@ export default function PricingSection() {
               </div>
 
               {/* Content */}
-              <div className="p-8 md:p-10">
+              <div className="p-8 md:p-10 flex-1 flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-3xl md:text-4xl font-serif font-light mb-2">
                     {lang === 'en' ? 'Photo Walk' : 'Фотопрогулка'}
@@ -154,7 +154,7 @@ export default function PricingSection() {
                 </ul>
 
                 {/* CTA */}
-                <button className="btn-rounded-ghost w-full">
+                <button className="btn-rounded-ghost w-full mt-auto">
                   {lang === 'en' ? 'Get in Touch' : 'Написать'}
                 </button>
               </div>
