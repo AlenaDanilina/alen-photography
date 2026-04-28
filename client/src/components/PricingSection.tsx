@@ -20,15 +20,17 @@ const featuresPortraitEN = [
   '2–3 hours, no strict timing',
   'Guidance with posing & styling',
   'Access to studio wardrobe, outfit curation',
+  'Originals upon request',
 ];
 
 const featuresPhotoWalkEN = [
   'Film + digital (digital priority)',
-  'Limited to 1.5 hours — no studio, outdoor locations or your location',
+  '1.5 hours — no studio, outdoor locations or your location',
   '30–40 selected images',
+  'Light retouch',
   'Guidance with posing & styling',
   'Outfit curation',
-  'Light retouch',
+  'Originals upon request',
 ];
 
 const featuresPortraitRU = [
@@ -39,15 +41,17 @@ const featuresPortraitRU = [
   '2–3 часа, без жёстких ограничений',
   'Помощь с позированием и образами',
   'Доступ к студийному гардеробу, сбор образов',
+  'Оригиналы по запросу',
 ];
 
 const featuresPhotoWalkRU = [
   'Плёнка + digital (приоритет digital)',
   'Максимум 1.5 часа — без студии, уличные локации или ваша локация',
   '30–40 отобранных кадров',
+  'Лёгкая ретушь',
   'Помощь с позированием и образами',
   'Сбор образов',
-  'Лёгкая ретушь',
+  'Оригиналы по запросу',
 ];
 
 export default function PricingSection() {
